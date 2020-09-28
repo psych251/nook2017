@@ -1,3 +1,3 @@
-# nook2020
+# nook2017
 
-Project repository for replication of Nook, Vidal Bustamante, Cho, & Somerville (2020)
+Project repository for replication of Nook, Schleider, & Somerville (2020)
