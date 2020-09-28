@@ -1,3 +1,3 @@
 # nook2020
 
-Project repository for replication of Nook, Schleider, & Somerville (2017) Study 2
+Project repository for replication of Nook, Vidal Bustamante, Cho, & Somerville (2020)
