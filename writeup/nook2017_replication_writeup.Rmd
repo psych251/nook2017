@@ -1,0 +1,190 @@
+---
+title: "Replication of A Linguistic Signature of Psychological Distancing in Emotion Regulation by Erik C. Nook, Jessica L. Schleider, and Leah H. Somerville (2017, Journal of Experimental Psychology: General)"
+author: "Hannah E. Marshall (hannah21@stanford.edu)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+---
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+
+## Introduction
+
+Currently, my research investigates young children's implicit understanding of linguistic politeness. I envisage my future work focusing more broadly on language in social contexts, principally on how children and adolescents use language to construct and reconstruct interpersonal relationships. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing. Emotion regulation plays a crucial role in the way children and adolescents perceive and relate to their environment, and is fundamental to developing successful relationships, which is why I deem it relevant to my research interests.
+
+Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of social and temporal distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings I seek to replicate.
+
+The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of three lists of 20 neutral and negative images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 120 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
+
+The only anticipated challenges include compiling the stimuli and becoming familiar with mTurk and the LIWC program.
+
+Link to project repository: https://github.com/psych251/nook2017
+
+Link to original paper: https://github.com/psych251/nook2017/blob/master/original_paper/nook2017.pdf
+
+## Methods
+
+### Power Analysis
+
+_Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size._
+
+### Planned Sample
+
+_Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any._
+
+Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
+
+The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Our replication will not allow participants to submit their responses before 20 seconds has elapsed. Responses will be automatically submitted after 1 minute. We will exclude participants who write about topics other than the images.
+
+To ensure compliance with federal minimum wage, participants will be paid $1.50.
+
+### Materials
+
+The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images [...] The other two lists were both negative, and they were matched for valence [...] and arousal". 
+
+Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g., imagine that the objects are fake or that something good is about to happen)."
+
+"This design divided trials into three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral."
+
+Our replication will follow the original authors' design, except that it will only include two lists (look negative and reappraise negative) of 10 images and the paradigm will be set up on Qualtrics and linked for use on mTurk. We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
+
+Link to paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_1SKBE3Rkzs7qibz
+
+_Note: The paradigm still has to be updated with double the trials. I am currently working on grouping images with comparable valence and arousal ratings.
+
+### Procedure	
+
+In the original study, participants "transcribed what they were thinking and feeling about the image into a textbox that appeared below the image" then "rated how they were feeling on a 7-point scale (1 Not bad at all to 7  Extremely bad)." They "completed 20 trials of each condition" and "reported their age, gender, race, and annual family income at the end of the survey."
+
+"Mapping of list and condition was counterbalanced across participants."
+
+We will precisely follow the original procedure as detailed above, except the mapping of the lists will be randomized as opposed to counterbalanced.
+
+### Analysis Plan
+
+The original researchers "computed each participant’s average negative affect rating for trials in each condition" and "used Pennebaker’s Linguistic Inquiry and Word Count (LIWC) program to analyze text entries for each trial" (Pennebaker et al., 2007). Text entries were proofread for spelling before analysis.
+
+Nook et al. "focused linguistic analyses on (a) negative affect words (e.g., hurt, nasty, worried, sad, crying, annoyed), (b) positive affect words (e.g., love, nice, sweet, happy, laughing, cute), and (c) a composite linguistic measure of psychological distancing" (following Mehl, Robbins, & Holleran, 2012). To compute this measure, Nook et al. "z-scored use of first-person singular pronouns (e.g., I, me, my), present-tense verbs, articles (the, a, an), discrepancy words (e.g., would, could, should), and words of more than six letters across trials." They then "reverse-scored the z-scored frequencies of first-person singular pronouns, present-tense verbs, and discrepancy words by multiplying them by -1 and averaged these with the z-scored frequencies of articles and words of more than six letters for each trial." They "averaged this measure of linguistic distancing across trials within each condition for each participant."
+
+To test whether people spontaneously distance their language when regulating emotions, one must determine whether participants' average use of linguistic distancing words (mean z-scored frequencies) differ significant across conditions. Nook et al. "used repeated-measures analyses of variance (ANOVAs) to test for significant differences across the three conditions." When significant effects emerged, they "conducted follow-up paired-samples t tests [the **key analysis of interest**] to assess for differences between the reappraise negative condition and the other two conditions."
+
+To test whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation, one must determine whether there is a statistically significant correlation between the extent to which participants increase their use of words encoding psychological distance and the extent to which participants reduce their negative affect when regulating. Nook et al. "created a measure of reappraisal success for each participant by subtracting their average negative affect rating for images in the reappraise negative condition from their average rating for images in the look negative condition." They then "created analogous measures of how much each participant modulated their language when regulating their emotions by subtracting each participant’s average frequency of negative affect words, positive affect words, and linguistic distancing words in the look negative condition from their average use in the reappraise negative condition." Nook et al. "used Pearson’s correlations [the **key analysis of interest**] to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing."
+
+We will precisely follow the original analysis plan as detailed above.
+
+### Differences from Original Study
+
+_Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect._
+
+Our replication will not allow participants to submit their responses before 30 seconds has elapsed, at which point their responses will automatically be submitted.
+
+To ensure compliance with federal minimum wage, participants will be paid $1.50 for their time.
+
+Our replication will only include two lists (look negative and reappraise negative) of 10 images and the paradigm will be set up on Qualtrics and linked for use on mTurk.
+
+We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
+
+The mapping of our lists will be randomized as opposed to counterbalanced.
+
+### Methods Addendum (Post Data Collection)
+
+_You can comment this section out prior to final report with data collection._
+
+#### Actual Sample
+
+_Sample size, demographics, data exclusions based on rules spelled out in analysis plan_
+
+#### Differences from pre-data collection methods plan
+
+_Any differences from what was described as the original plan, or “none”._
+
+## Results
+
+### Data preparation
+	
+```{r load libraries}
+library(dplyr)
+library(tidyr)
+```
+
+```{r import data}
+csv <- read.csv("nook2017anonymized_data.csv")
+```
+
+```{r tidy data}
+data <- csv %>% 
+  
+  select(-c(StartDate, EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, ResponseId, DistributionChannel, UserLanguage,starts_with("Q"), mTurk )) %>% 
+
+  unite("look1", look1, look1feeling, sep="__") %>% 
+  unite("look1c", look1_c, look1feeling_c, sep="__" ) %>% 
+  unite("look2", look2, look2feeling, sep="__") %>% 
+  unite("look2c", look2_c, look2feeling_c, sep="__" ) %>% 
+  unite("look3", look3, look3feeling, sep="__") %>% 
+  unite("look3c", look3_c, look3feeling_c, sep="__" ) %>% 
+  unite("look4", look4, look4feeling, sep="__") %>% 
+  unite("look4c", look4_c, look4feeling_c, sep="__" ) %>% 
+  unite("look5", look5, look5feeling, sep="__") %>% 
+  unite("look5c", look5_c, look5feeling_c, sep="__" ) %>% 
+  unite("change1", change1, change1feeling, sep="__") %>% 
+  unite("change1c", change1_c, change1feeling_c, sep="__" ) %>% 
+  unite("change2", change2, change2feeling, sep="__") %>% 
+  unite("change2c", change2_c, change2feeling_c, sep="__" ) %>% 
+  unite("change3", change3, change3feeling, sep="__") %>% 
+  unite("change3c", change3_c, change3feeling_c, sep="__" ) %>% 
+  unite("change4", change4, change4feeling, sep="__") %>% 
+  unite("change4c", change4_c, change4feeling_c, sep="__" ) %>% 
+  unite("change5", change5, change5feeling, sep="__") %>% 
+  unite("change5c", change5_c, change5feeling_c, sep="__" ) %>% 
+  
+  
+  pivot_longer(cols=c("look1", "look2", "look3", "look4", "look5", "change1", "change2", "change3", "change4", "change5","look1c", "look2c", "look3c", "look4c", "look5c", "change1c", "change2c", "change3c", "change4c", "change5c"),
+               names_to = "condition",
+               values_to = "response") %>% 
+  
+  separate(response, c("written_response", "rating"), sep ="__")
+
+data$condition[data$condition == c("look1", "look2", "look3", "look4", "look5")] <- "look"
+data$condition[data$condition == c("look1c", "look2c", "look3c", "look4c", "look5c")] <- "look"
+data$condition[data$condition == c("change1", "change2", "change3", "change4", "change5")] <- "change"
+data$condition[data$condition == c("change1c", "change2c", "change3c", "change4c", "change5c")] <- "change"
+
+View(data)
+
+```
+
+### Confirmatory analysis
+
+_The analyses as specified in the analysis plan._
+
+Please note: I am having some difficultly accessing the LIWC program, which I will be using to analyze the text responses, so I have not been able to code the confirmatory analysis. I emailed the company this weekend and am awaiting their reply, which I will hopefully receive on Monday.
+
+Output variables will include:
+- linguistic_distancing
+- first_person_pronouns
+- present_verbs
+- discrepancy_words
+- articles
+- over_six_letters
+- z_score
+- inverse_z_score
+
+*Side-by-side graph with original graph is ideal here*
+
+### Exploratory analyses
+
+_Any follow-up analyses desired (not required)._
+
+## Discussion
+
+### Summary of Replication Attempt
+
+Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+
+### Commentary
+
+Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
