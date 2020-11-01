@@ -1,7 +1,5 @@
 # nook2017
 
-## Description
-
 Project repository for replication of Nook, Schleider, & Somerville (2017) Study 1
 
 Completed through _PSYCH 251: Experimental Methods_ at Stanford University
