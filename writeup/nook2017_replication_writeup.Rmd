@@ -30,7 +30,11 @@ Link to original paper: https://github.com/psych251/nook2017/blob/master/origina
 
 ### Power Analysis
 
-_Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size._
+A power analysis in G*Power indicated that 63 participants were required to observe a within-subjects emotion regulation effect (estimated d = 0.36) at p < 0.05 and 80% power. As per the original author's power analysis, the estimated effect size was based on a 2012 emotion regulation meta-analysis (Webb, Miles, & Sheeran).
+
+To observe the same effect with 90% power, 84 participants are required. To observe the same effect with 95% power, 103 participants are required.
+
+Do to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the same effect with 78% power. However, the final power with likely be less than 78% after accounting for likely exclusions.
 
 ### Planned Sample
 
@@ -78,8 +82,6 @@ We will precisely follow the original analysis plan as detailed above.
 
 ### Differences from Original Study
 
-_Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect._
-
 Our replication will not allow participants to submit their responses before 30 seconds has elapsed, at which point their responses will automatically be submitted.
 
 To ensure compliance with federal minimum wage, participants will be paid $1.50 for their time.
@@ -116,62 +118,163 @@ csv <- read.csv("nook2017anonymized_data.csv")
 ```
 
 ```{r tidy data}
-data <- csv %>% 
+df.tidy <- csv %>% 
   
-  select(-c(StartDate, EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, ResponseId, DistributionChannel, UserLanguage,starts_with("Q"), mTurk )) %>% 
+  # Remove unnecessary variables.
+  select(-c(StartDate, EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, UserLanguage,starts_with("Q"), mTurk )) %>% 
 
+  # Tidy data.
   unite("look1", look1, look1feeling, sep="__") %>% 
-  unite("look1c", look1_c, look1feeling_c, sep="__" ) %>% 
+  unite("look1c", look1_c, look1feeling_c, sep="__") %>% 
   unite("look2", look2, look2feeling, sep="__") %>% 
-  unite("look2c", look2_c, look2feeling_c, sep="__" ) %>% 
+  unite("look2c", look2_c, look2feeling_c, sep="__") %>% 
   unite("look3", look3, look3feeling, sep="__") %>% 
-  unite("look3c", look3_c, look3feeling_c, sep="__" ) %>% 
+  unite("look3c", look3_c, look3feeling_c, sep="__") %>% 
   unite("look4", look4, look4feeling, sep="__") %>% 
-  unite("look4c", look4_c, look4feeling_c, sep="__" ) %>% 
+  unite("look4c", look4_c, look4feeling_c, sep="__") %>% 
   unite("look5", look5, look5feeling, sep="__") %>% 
-  unite("look5c", look5_c, look5feeling_c, sep="__" ) %>% 
+  unite("look5c", look5_c, look5feeling_c, sep="__") %>% 
+  unite("look6", look6, look6feeling, sep="__") %>% 
+  unite("look6c", look6_c, look6feeling_c, sep="__") %>% 
+  unite("look7", look7, look7feeling, sep="__") %>% 
+  unite("look7c", look7_c, look7feeling_c, sep="__") %>% 
+  unite("look8", look8, look8feeling, sep="__") %>% 
+  unite("look8c", look8_c, look8feeling_c, sep="__") %>% 
+  unite("look9", look9, look9feeling, sep="__") %>% 
+  unite("look9c", look9_c, look9feeling_c, sep="__") %>% 
+  unite("look10", look10, look10feeling, sep="__") %>% 
+  unite("look10c", look10_c, look10feeling_c, sep="__") %>% 
   unite("change1", change1, change1feeling, sep="__") %>% 
-  unite("change1c", change1_c, change1feeling_c, sep="__" ) %>% 
+  unite("change1c", change1_c, change1feeling_c, sep="__") %>% 
   unite("change2", change2, change2feeling, sep="__") %>% 
-  unite("change2c", change2_c, change2feeling_c, sep="__" ) %>% 
+  unite("change2c", change2_c, change2feeling_c, sep="__") %>% 
   unite("change3", change3, change3feeling, sep="__") %>% 
-  unite("change3c", change3_c, change3feeling_c, sep="__" ) %>% 
+  unite("change3c", change3_c, change3feeling_c, sep="__") %>% 
   unite("change4", change4, change4feeling, sep="__") %>% 
-  unite("change4c", change4_c, change4feeling_c, sep="__" ) %>% 
+  unite("change4c", change4_c, change4feeling_c, sep="__") %>% 
   unite("change5", change5, change5feeling, sep="__") %>% 
-  unite("change5c", change5_c, change5feeling_c, sep="__" ) %>% 
+  unite("change5c", change5_c, change5feeling_c, sep="__") %>% 
+  unite("change6", change6, change6feeling, sep="__") %>% 
+  unite("change6c", change6_c, change6feeling_c, sep="__") %>% 
+  unite("change7", change7, change7feeling, sep="__") %>% 
+  unite("change7c", change7_c, change7feeling_c, sep="__") %>% 
+  unite("change8", change8, change8feeling, sep="__") %>% 
+  unite("change8c", change8_c, change8feeling_c, sep="__") %>% 
+  unite("change9", change9, change9feeling, sep="__") %>% 
+  unite("change9c", change9_c, change9feeling_c, sep="__") %>% 
+  unite("change10", change10, change10feeling, sep="__") %>% 
+  unite("change10c", change10_c, change10feeling_c, sep="__") %>% 
   
-  
-  pivot_longer(cols=c("look1", "look2", "look3", "look4", "look5", "change1", "change2", "change3", "change4", "change5","look1c", "look2c", "look3c", "look4c", "look5c", "change1c", "change2c", "change3c", "change4c", "change5c"),
+  pivot_longer(cols=c("look1", "look2", "look3", "look4", "look5", "look6", "look7", "look8", "look9", "look10", "change1", "change2", "change3", "change4", "change5", "change6", "change7", "change8", "change9", "change10", "look1c", "look2c", "look3c", "look4c", "look5c", "look6c", "look7c", "look8c", "look9c", "look10c","change1c", "change2c", "change3c", "change4c", "change5c", "change6c", "change7c", "change8c", "change9c", "change10c"),
                names_to = "condition",
-               values_to = "response") %>% 
+               values_to = "response")
+
+# Remove unnecessary rows.
+df.clean <- df.tidy[!(df.tidy$DistributionChannel=="preview" |
+                  df.tidy$response=="__" |
+                  df.tidy$DistributionChannel=="Distribution Channel" |
+                  df.tidy$age=="test" |
+                  df.tidy$DistributionChannel=='{"ImportId":"distributionChannel"}' |
+                  
+                  # Exclude participants.
+                  df.tidy$ResponseId=="R_2U8T4deIgQUKuSQ" |
+                  df.tidy$ResponseId=="R_1K1GDNZ3Jxc6x9r"),]
+
+df.wrangled <- df.clean %>% 
+  separate(response, c("written_response", "rating"), sep ="__") %>% 
+  select(-DistributionChannel)
+
+# Rename observations.
+df.wrangled$condition[df.wrangled$condition == c("look1", "look2", "look3", "look4", "look5")] <- "look"
+df.wrangled$condition[df.wrangled$condition == c("look6", "look7", "look8", "look9", "look10")] <- "look"
+df.wrangled$condition[df.wrangled$condition == c("look1c", "look2c", "look3c", "look4c", "look5c")] <- "look"
+df.wrangled$condition[df.wrangled$condition == c("look6c", "look7c", "look8c", "look9c", "look10c")] <- "look"
+df.wrangled$condition[df.wrangled$condition == c("change1", "change2", "change3", "change4", "change5")] <- "change"
+df.wrangled$condition[df.wrangled$condition == c("change6", "change7", "change8", "change9", "change10")] <- "change"
+df.wrangled$condition[df.wrangled$condition == c("change1c", "change2c", "change3c", "change4c", "change5c")] <- "change"
+df.wrangled$condition[df.wrangled$condition == c("change6c", "change7c", "change8c", "change9c", "change10c")] <- "change"
+
+df.wrangled$rating[df.wrangled$rating == "1 (Not bad at all)"] <- "1"
+df.wrangled$rating[df.wrangled$rating == "7 (Extremely bad)"] <- "7"
+
+View(df.wrangled)
+```
+
+```{r write csv file for LIWC processing}
+write.csv(df.wrangled,"nook2017wrangled_data.csv", row.names = FALSE)
+```
+
+Here, wrangled data is manually edited for spelling errors and exporting issues (e.g. Qualtrics coding apostrophes as other icons). The edited csv was run through LIWC.
+
+```{r import analyzed data}
+df.LIWC <- read.csv("nook2017LIWC_analyzed_data.csv")
+```
+
+```{r prepare data for analyses}
+df.new_variables <- df.LIWC %>% 
+  rename(subject = Source..A.,
+         age = Source..B., 
+         gender = Source..C., 
+         race = Source..D., 
+         condition = Source..E., 
+         written_response = Source..F., 
+         rating = Source..G., 
+         six_letter = Sixltr, 
+         pronoun = i, 
+         positive_affect = posemo, 
+         negative_affect = negemo, 
+         discrepancy = discrep) %>% 
   
-  separate(response, c("written_response", "rating"), sep ="__")
+  group_by(subject, condition) %>%
+  mutate(pronoun_rz = -(pronoun - mean(pronoun, na.rm=TRUE))/sd(pronoun, na.rm=TRUE),
+         verb_rz = -(verb - mean(verb, na.rm=TRUE))/sd(verb, na.rm=TRUE),
+         article_z = (article - mean(article, na.rm=TRUE))/sd(article, na.rm=TRUE),
+         discrepancy_rz = -(discrepancy - mean(discrepancy, na.rm=TRUE))/sd(discrepancy, na.rm=TRUE),
+         six_letter_z = (six_letter - mean(six_letter, na.rm=TRUE))/sd(six_letter, na.rm=TRUE),
+         mean_look_rating = ifelse(condition=="look", mean(rating), NA),
+         mean_change_rating = ifelse(condition=="change", mean(rating), NA)) %>% 
+  
+  group_by(subject) %>%
+  mutate(reappraisal = mean(mean_look_rating, na.rm = TRUE) - mean(mean_change_rating, na.rm = TRUE))
 
-data$condition[data$condition == c("look1", "look2", "look3", "look4", "look5")] <- "look"
-data$condition[data$condition == c("look1c", "look2c", "look3c", "look4c", "look5c")] <- "look"
-data$condition[data$condition == c("change1", "change2", "change3", "change4", "change5")] <- "change"
-data$condition[data$condition == c("change1c", "change2c", "change3c", "change4c", "change5c")] <- "change"
+df.new_variables$pronoun_rz[df.new_variables$pronoun_rz == "NaN"] <- 0
+df.new_variables$verb_rz[df.new_variables$verb_rz == "NaN"] <- 0
+df.new_variables$article_z[df.new_variables$article_z == "NaN"] <- 0
+df.new_variables$discrepancy_rz[df.new_variables$discrepancy_rz == "NaN"] <- 0
+df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
+  
+df.linguistic_distancing <- df.new_variables %>% 
+  mutate(linguistic_distancing = (pronoun_rz + verb_rz + article_z + discrepancy_rz + six_letter_z)/5,
+         avg_linguistic_distancing = mean(linguistic_distancing))
 
-View(data)
 
+View(df.linguistic_distancing)
 ```
 
 ### Confirmatory analysis
 
 _The analyses as specified in the analysis plan._
 
-Please note: I am having some difficultly accessing the LIWC program, which I will be using to analyze the text responses, so I have not been able to code the confirmatory analysis. I emailed the company this weekend and am awaiting their reply, which I will hopefully receive on Monday.
+```{r t-test}
+t.test(formula = avg_linguistic_distancing ~ condition, data = df.linguistic_distancing)
+```
 
-Output variables will include:
-- linguistic_distancing
-- first_person_pronouns
-- present_verbs
-- discrepancy_words
-- articles
-- over_six_letters
-- z_score
-- inverse_z_score
+```{r Pearson's correlations}
+cor_reappraisal_positive_affect <- cor.test(df.linguistic_distancing$reappraisal, 
+                                            df.linguistic_distancing$positive_affect, 
+                                            method = "pearson")
+cor_reappraisal_positive_affect
+
+cor.reappraisal_negative_affect <- cor.test(df.linguistic_distancing$reappraisal, 
+                                            df.linguistic_distancing$negative_affect, 
+                                            method = "pearson")
+cor.reappraisal_negative_affect
+
+cor.reappraisal_linguistic_distancing <- cor.test(df.linguistic_distancing$reappraisal, 
+                                                  df.linguistic_distancing$linguistic_distancing, 
+                                                  method = "pearson")
+cor.reappraisal_linguistic_distancing
+```
 
 *Side-by-side graph with original graph is ideal here*
 
