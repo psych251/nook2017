@@ -11,3 +11,5 @@ _images_: Collection of images from the Open Affective Standardized Image Set (O
 _original_paper_: Nook, Schleider, & Somerville (2017)
 
 _writeup_: Replication writeup and dataset from Qualtrics
+
+_image_set_comparison_: Code comparing the means and standard deviations of the valence and arousal ratings for the two image sets
