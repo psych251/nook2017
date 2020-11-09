@@ -34,11 +34,9 @@ A power analysis in G*Power indicated that 63 participants were required to obse
 
 To observe the same effect with 90% power, 84 participants are required. To observe the same effect with 95% power, 103 participants are required.
 
-Do to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the same effect with 78% power. However, the final power with likely be less than 78% after accounting for likely exclusions.
+Due to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the same effect with 78% power; however, the final power may be less than 78% after accounting for exclusions.
 
 ### Planned Sample
-
-_Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any._
 
 Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
 
@@ -57,8 +55,6 @@ Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue
 Our replication will follow the original authors' design, except that it will only include two lists (look negative and reappraise negative) of 10 images and the paradigm will be set up on Qualtrics and linked for use on mTurk. We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
 
 Link to paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_1SKBE3Rkzs7qibz
-
-_Note: The paradigm still has to be updated with double the trials. I am currently working on grouping images with comparable valence and arousal ratings.
 
 ### Procedure	
 
@@ -81,8 +77,6 @@ To test whether the tendency to use more psychologically distant language when r
 We will precisely follow the original analysis plan as detailed above.
 
 ### Differences from Original Study
-
-Our replication will not allow participants to submit their responses before 30 seconds has elapsed, at which point their responses will automatically be submitted.
 
 To ensure compliance with federal minimum wage, participants will be paid $1.50 for their time.
 
@@ -108,7 +102,7 @@ _Any differences from what was described as the original plan, or “none”._
 
 ### Data preparation
 	
-```{r load libraries}
+```{r load libraries, message=FALSE}
 library(dplyr)
 library(tidyr)
 ```
@@ -237,6 +231,7 @@ df.new_variables <- df.LIWC %>%
   group_by(subject) %>%
   mutate(reappraisal = mean(mean_look_rating, na.rm = TRUE) - mean(mean_change_rating, na.rm = TRUE))
 
+# Note: I am unsure how to treat the incomputable z-scores, so they may not be set to 0 in the final data analysis.
 df.new_variables$pronoun_rz[df.new_variables$pronoun_rz == "NaN"] <- 0
 df.new_variables$verb_rz[df.new_variables$verb_rz == "NaN"] <- 0
 df.new_variables$article_z[df.new_variables$article_z == "NaN"] <- 0
@@ -259,7 +254,7 @@ _The analyses as specified in the analysis plan._
 t.test(formula = avg_linguistic_distancing ~ condition, data = df.linguistic_distancing)
 ```
 
-```{r Pearson's correlations}
+```{r correlations}
 cor_reappraisal_positive_affect <- cor.test(df.linguistic_distancing$reappraisal, 
                                             df.linguistic_distancing$positive_affect, 
                                             method = "pearson")
@@ -286,8 +281,8 @@ _Any follow-up analyses desired (not required)._
 
 ### Summary of Replication Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+_Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result._  
 
 ### Commentary
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+_Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long._
