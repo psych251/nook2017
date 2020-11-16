@@ -18,7 +18,7 @@ Currently, my research investigates young children's implicit understanding of l
 
 Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of social and temporal distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings I seek to replicate.
 
-The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of three lists of 20 neutral and negative images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 120 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
+The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of three lists of 20 neutral and negative images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
 
 The only anticipated challenges include compiling the stimuli and becoming familiar with mTurk and the LIWC program.
 
@@ -40,7 +40,15 @@ Due to funding limitations, we may only be able to run 60 participants. If this 
 
 Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
 
-The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Our replication will not allow participants to submit their responses before 20 seconds has elapsed. Responses will be automatically submitted after 1 minute. We will exclude participants who write about topics other than the images.
+The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Responses will be automatically submitted after 30 seconds. 
+
+In our replication, participants will be excluded if:
+
+- They fail the attention check. (At the end of the survey, participants will be presented with 9 images: 5 from the survey and 4 others. Participants will be asked to select the images that were part of the survey.)
+- They progress through five or more trials before 30 seconds has elapsed.
+- Five or more of their written responses do not cite any negative thoughts or emotions.
+- Five or more of their written responses refer to topics other than the images.
+- Two or more of their written responses are word-for-word repeats of another written response.
 
 To ensure compliance with federal minimum wage, participants will be paid $1.50.
 
@@ -48,7 +56,7 @@ To ensure compliance with federal minimum wage, participants will be paid $1.50.
 
 The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images [...] The other two lists were both negative, and they were matched for valence [...] and arousal". 
 
-Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g., imagine that the objects are fake or that something good is about to happen)."
+Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)."
 
 "This design divided trials into three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral."
 
@@ -62,7 +70,7 @@ In the original study, participants "transcribed what they were thinking and fee
 
 "Mapping of list and condition was counterbalanced across participants."
 
-We will precisely follow the original procedure as detailed above, except the mapping of the lists will be randomized as opposed to counterbalanced.
+We will precisely follow the original procedure as detailed above, except participants will complete 10 trials of each condition and the mapping of the lists will be randomized as opposed to counterbalanced.
 
 ### Analysis Plan
 
@@ -85,6 +93,14 @@ Our replication will only include two lists (look negative and reappraise negati
 We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
 
 The mapping of our lists will be randomized as opposed to counterbalanced.
+
+In our replication, participants will be excluded if:
+
+- They fail the attention check. (At the end of the survey, participants will be presented with 9 images: 5 from the survey and 4 others. Participants will be asked to select the images that were part of the survey.)
+- They progress through five or more trials before 30 seconds has elapsed.
+- Five or more of their written responses do not cite any negative thoughts or emotions.
+- Five or more of their written responses refer to topics other than the images.
+- Two or more of their written responses are word-for-word repeats of another written response.
 
 ### Methods Addendum (Post Data Collection)
 
