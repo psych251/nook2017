@@ -6,7 +6,7 @@ Completed through _PSYCH 251: Experimental Methods_ at Stanford University
 
 ## Folder Descriptions
 
-_images_: Collection of images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016)
+_images_: Collection of images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016) and other images used in the attention check
 
 _original_paper_: Nook, Schleider, & Somerville (2017)
 
