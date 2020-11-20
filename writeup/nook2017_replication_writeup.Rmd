@@ -10,15 +10,13 @@ output:
       collapsed: false
 ---
 
-<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
-
 ## Introduction
 
 Currently, my research investigates young children's implicit understanding of linguistic politeness. I envisage my future work focusing more broadly on language in social contexts, principally on how children and adolescents use language to construct and reconstruct interpersonal relationships. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing. Emotion regulation plays a crucial role in the way children and adolescents perceive and relate to their environment, and is fundamental to developing successful relationships, which is why I deem it relevant to my research interests.
 
 Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of social and temporal distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings I seek to replicate.
 
-The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of three lists of 20 neutral and negative images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
+The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of two lists of 20 negative images and one list of 20 neutral images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
 
 The only anticipated challenges include compiling the stimuli and becoming familiar with mTurk and the LIWC program.
 
@@ -34,13 +32,13 @@ A power analysis in G*Power indicated that 63 participants were required to obse
 
 To observe the same effect with 90% power, 84 participants are required. To observe the same effect with 95% power, 103 participants are required.
 
-Due to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the same effect with 78% power; however, the final power may be less than 78% after accounting for exclusions.
+Due to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the estimated effect with 78% power; however, the final power may be less than 78% after accounting for exclusions.
 
 ### Planned Sample
 
 Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
 
-The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Responses will be automatically submitted after 30 seconds. 
+The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Like the original study, written responses will be automatically submitted after 30 seconds. 
 
 In our replication, participants will be excluded if:
 
@@ -50,27 +48,29 @@ In our replication, participants will be excluded if:
 - Five or more of their written responses refer to topics other than the images.
 - Two or more of their written responses are word-for-word repeats of another written response.
 
-To ensure compliance with federal minimum wage, participants will be paid $1.50.
+To ensure compliance with federal minimum wage, participants will be paid $1.50 for completing our survey.
 
 ### Materials
 
-The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images [...] The other two lists were both negative, and they were matched for valence [...] and arousal". 
+The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images [...] The other two lists were both negative, and they were matched for valence (List A: M  = 2.37, SD  = 0.42; List B: M = 2.38, SD = 0.42; item analysis t(38) = -0.12, p = .906) and arousal (List A: M = 4.24, SD = 0.56; List B: M = 4.25, SD = 0.50; t(38) = -0.06, p = .954)."
 
-Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)."
+Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)." 
 
 "This design divided trials into three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral."
 
-Our replication will follow the original authors' design, except that it will only include two lists (look negative and reappraise negative) of 10 images and the paradigm will be set up on Qualtrics and linked for use on mTurk. We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
+Our replication will follow the original authors' design, except that it will only include two lists (look negative and reappraise negative) of 10 images which will be matched for valence (List A: M = 2.32, SD = 0.41; List B: M = 2.31, SD = 0.37; t(18) = 0.08, p = .940) and arousal (List A: M = 4.33, SD = 0.55; List B: M = 4.36, SD = 0.57; t(18) = -0.11, p = .912). We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
+
+The replication paradigm will be set up on Qualtrics and linked for use on mTurk. 
 
 Link to paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_1SKBE3Rkzs7qibz
 
 ### Procedure	
 
-In the original study, participants "transcribed what they were thinking and feeling about the image into a textbox that appeared below the image" then "rated how they were feeling on a 7-point scale (1 Not bad at all to 7  Extremely bad)." They "completed 20 trials of each condition" and "reported their age, gender, race, and annual family income at the end of the survey."
+In the original study, participants "transcribed what they were thinking and feeling about the image into a textbox that appeared below the image" then "rated how they were feeling on a 7-point scale (1 Not bad at all to 7 Extremely bad)." They "completed 20 trials of each condition" and "reported their age, gender, race, and annual family income at the end of the survey."
 
 "Mapping of list and condition was counterbalanced across participants."
 
-We will precisely follow the original procedure as detailed above, except participants will complete 10 trials of each condition and the mapping of the lists will be randomized as opposed to counterbalanced.
+We will precisely follow the original procedure as detailed above, except participants will complete 10 trials of each condition and the mapping of the lists will be counterbalanced.
 
 ### Analysis Plan
 
@@ -88,11 +88,9 @@ We will precisely follow the original analysis plan as detailed above.
 
 To ensure compliance with federal minimum wage, participants will be paid $1.50 for their time.
 
-Our replication will only include two lists (look negative and reappraise negative) of 10 images and the paradigm will be set up on Qualtrics and linked for use on mTurk.
+Our replication will only include two lists (look negative and reappraise negative) of 10 images. We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study. 
 
-We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
-
-The mapping of our lists will be randomized as opposed to counterbalanced.
+The paradigm will be set up on Qualtrics and linked for use on mTurk.
 
 In our replication, participants will be excluded if:
 
@@ -104,7 +102,11 @@ In our replication, participants will be excluded if:
 
 ### Methods Addendum (Post Data Collection)
 
-_You can comment this section out prior to final report with data collection._
+Our replication used the same task instructions as the original study, with a few additional sentences to inform participants that their responses would submit automatically after 30 seconds and to encourage participants to pay attention. See project repository for a full side-by-side comparison.
+
+The order that the 20 images appeared to participants was randomized.
+
+Participants were not asked to report annual family income as originally planned, but they were asked to report their age, gender, and race at the end of the survey. These questions were not required fields.
 
 #### Actual Sample
 
@@ -117,10 +119,14 @@ _Any differences from what was described as the original plan, or “none”._
 ## Results
 
 ### Data preparation
-	
+
 ```{r load libraries, message=FALSE}
-library(dplyr)
 library(tidyr)
+library(stringr)
+library(ggplot2)
+library(Rmisc)
+library(dplyr)
+library(ggsignif)
 ```
 
 ```{r import data}
@@ -131,67 +137,69 @@ csv <- read.csv("nook2017anonymized_data.csv")
 df.tidy <- csv %>% 
   
   # Remove unnecessary variables.
-  select(-c(StartDate, EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, UserLanguage,starts_with("Q"), mTurk )) %>% 
+  select(-c(EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, UserLanguage, ends_with("Click"), ends_with("Count"), mTurk )) %>% 
 
   # Tidy data.
-  unite("look1", look1, look1feeling, sep="__") %>% 
-  unite("look1c", look1_c, look1feeling_c, sep="__") %>% 
-  unite("look2", look2, look2feeling, sep="__") %>% 
-  unite("look2c", look2_c, look2feeling_c, sep="__") %>% 
-  unite("look3", look3, look3feeling, sep="__") %>% 
-  unite("look3c", look3_c, look3feeling_c, sep="__") %>% 
-  unite("look4", look4, look4feeling, sep="__") %>% 
-  unite("look4c", look4_c, look4feeling_c, sep="__") %>% 
-  unite("look5", look5, look5feeling, sep="__") %>% 
-  unite("look5c", look5_c, look5feeling_c, sep="__") %>% 
-  unite("look6", look6, look6feeling, sep="__") %>% 
-  unite("look6c", look6_c, look6feeling_c, sep="__") %>% 
-  unite("look7", look7, look7feeling, sep="__") %>% 
-  unite("look7c", look7_c, look7feeling_c, sep="__") %>% 
-  unite("look8", look8, look8feeling, sep="__") %>% 
-  unite("look8c", look8_c, look8feeling_c, sep="__") %>% 
-  unite("look9", look9, look9feeling, sep="__") %>% 
-  unite("look9c", look9_c, look9feeling_c, sep="__") %>% 
-  unite("look10", look10, look10feeling, sep="__") %>% 
-  unite("look10c", look10_c, look10feeling_c, sep="__") %>% 
-  unite("change1", change1, change1feeling, sep="__") %>% 
-  unite("change1c", change1_c, change1feeling_c, sep="__") %>% 
-  unite("change2", change2, change2feeling, sep="__") %>% 
-  unite("change2c", change2_c, change2feeling_c, sep="__") %>% 
-  unite("change3", change3, change3feeling, sep="__") %>% 
-  unite("change3c", change3_c, change3feeling_c, sep="__") %>% 
-  unite("change4", change4, change4feeling, sep="__") %>% 
-  unite("change4c", change4_c, change4feeling_c, sep="__") %>% 
-  unite("change5", change5, change5feeling, sep="__") %>% 
-  unite("change5c", change5_c, change5feeling_c, sep="__") %>% 
-  unite("change6", change6, change6feeling, sep="__") %>% 
-  unite("change6c", change6_c, change6feeling_c, sep="__") %>% 
-  unite("change7", change7, change7feeling, sep="__") %>% 
-  unite("change7c", change7_c, change7feeling_c, sep="__") %>% 
-  unite("change8", change8, change8feeling, sep="__") %>% 
-  unite("change8c", change8_c, change8feeling_c, sep="__") %>% 
-  unite("change9", change9, change9feeling, sep="__") %>% 
-  unite("change9c", change9_c, change9feeling_c, sep="__") %>% 
-  unite("change10", change10, change10feeling, sep="__") %>% 
-  unite("change10c", change10_c, change10feeling_c, sep="__") %>% 
+  unite("look1", "look1time_Page.Submit", look1, look1feeling, sep="__") %>% 
+  unite("look1c", "look1ctime_Page.Submit", look1_c, look1feeling_c, sep="__") %>% 
+  unite("look2", "look2time_Page.Submit", look2, look2feeling, sep="__") %>% 
+  unite("look2c", "look2ctime_Page.Submit", look2_c, look2feeling_c, sep="__") %>% 
+  unite("look3", "look3time_Page.Submit", look3, look3feeling, sep="__") %>% 
+  unite("look3c", "look3ctime_Page.Submit", look3_c, look3feeling_c, sep="__") %>% 
+  unite("look4", "look4time_Page.Submit", look4, look4feeling, sep="__") %>% 
+  unite("look4c", "look4ctime_Page.Submit", look4_c, look4feeling_c, sep="__") %>% 
+  unite("look5", "look5time_Page.Submit", look5, look5feeling, sep="__") %>% 
+  unite("look5c", "look5ctime_Page.Submit", look5_c, look5feeling_c, sep="__") %>% 
+  unite("look6", "look6time_Page.Submit", look6, look6feeling, sep="__") %>% 
+  unite("look6c", "look6ctime_Page.Submit", look6_c, look6feeling_c, sep="__") %>% 
+  unite("look7", "look7time_Page.Submit", look7, look7feeling, sep="__") %>% 
+  unite("look7c", "look7ctime_Page.Submit", look7_c, look7feeling_c, sep="__") %>% 
+  unite("look8", "look8time_Page.Submit", look8, look8feeling, sep="__") %>% 
+  unite("look8c", "look8ctime_Page.Submit", look8_c, look8feeling_c, sep="__") %>% 
+  unite("look9", "look9time_Page.Submit", look9, look9feeling, sep="__") %>% 
+  unite("look9c", "look9ctime_Page.Submit", look9_c, look9feeling_c, sep="__") %>% 
+  unite("look10", "look10time_Page.Submit", look10, look10feeling, sep="__") %>% 
+  unite("look10c", "look10ctime_Page.Submit", look10_c, look10feeling_c, sep="__") %>% 
+  unite("change1", "change1time_Page.Submit", change1, change1feeling, sep="__") %>% 
+  unite("change1c", "change1ctime_Page.Submit", change1_c, change1feeling_c, sep="__") %>% 
+  unite("change2", "change2time_Page.Submit", change2, change2feeling, sep="__") %>% 
+  unite("change2c", "change2ctime_Page.Submit", change2_c, change2feeling_c, sep="__") %>% 
+  unite("change3", "change3time_Page.Submit", change3, change3feeling, sep="__") %>% 
+  unite("change3c", "change3ctime_Page.Submit", change3_c, change3feeling_c, sep="__") %>% 
+  unite("change4", "change4time_Page.Submit", change4, change4feeling, sep="__") %>% 
+  unite("change4c", "change4ctime_Page.Submit", change4_c, change4feeling_c, sep="__") %>% 
+  unite("change5", "change5time_Page.Submit", change5, change5feeling, sep="__") %>% 
+  unite("change5c", "change5ctime_Page.Submit", change5_c, change5feeling_c, sep="__") %>% 
+  unite("change6", "change6time_Page.Submit", change6, change6feeling, sep="__") %>% 
+  unite("change6c", "change6ctime_Page.Submit", change6_c, change6feeling_c, sep="__") %>% 
+  unite("change7", "change7time_Page.Submit", change7, change7feeling, sep="__") %>% 
+  unite("change7c", "change7ctime_Page.Submit", change7_c, change7feeling_c, sep="__") %>% 
+  unite("change8", "change8time_Page.Submit", change8, change8feeling, sep="__") %>% 
+  unite("change8c", "change8ctime_Page.Submit", change8_c, change8feeling_c, sep="__") %>% 
+  unite("change9", "change9time_Page.Submit", change9, change9feeling, sep="__") %>% 
+  unite("change9c", "change9ctime_Page.Submit", change9_c, change9feeling_c, sep="__") %>% 
+  unite("change10", "change10time_Page.Submit", change10, change10feeling, sep="__") %>% 
+  unite("change10c", "change10ctime_Page.Submit", change10_c, change10feeling_c, sep="__") %>% 
   
   pivot_longer(cols=c("look1", "look2", "look3", "look4", "look5", "look6", "look7", "look8", "look9", "look10", "change1", "change2", "change3", "change4", "change5", "change6", "change7", "change8", "change9", "change10", "look1c", "look2c", "look3c", "look4c", "look5c", "look6c", "look7c", "look8c", "look9c", "look10c","change1c", "change2c", "change3c", "change4c", "change5c", "change6c", "change7c", "change8c", "change9c", "change10c"),
                names_to = "condition",
-               values_to = "response")
+               values_to = "response") %>% 
+  
+  # Remove failed attention checks and old data.
+  filter(str_detect(attention, "n", negate = TRUE)) %>% 
+  filter(str_detect(StartDate, "10-18", negate = TRUE)) %>% 
+  filter(str_detect(StartDate, "11-04", negate = TRUE)) %>% 
+  filter(str_detect(StartDate, "11-06", negate = TRUE))
 
 # Remove unnecessary rows.
 df.clean <- df.tidy[!(df.tidy$DistributionChannel=="preview" |
-                  df.tidy$response=="__" |
+                  df.tidy$response=="____" |
                   df.tidy$DistributionChannel=="Distribution Channel" |
                   df.tidy$age=="test" |
-                  df.tidy$DistributionChannel=='{"ImportId":"distributionChannel"}' |
-                  
-                  # Exclude participants.
-                  df.tidy$ResponseId=="R_2U8T4deIgQUKuSQ" |
-                  df.tidy$ResponseId=="R_1K1GDNZ3Jxc6x9r"),]
+                  df.tidy$DistributionChannel=='{"ImportId":"distributionChannel"}'),]
 
 df.wrangled <- df.clean %>% 
-  separate(response, c("written_response", "rating"), sep ="__") %>% 
+  separate(response, c("page_submit", "written_response", "rating"), sep ="__") %>% 
   select(-DistributionChannel)
 
 # Rename observations.
@@ -206,58 +214,92 @@ df.wrangled$condition[df.wrangled$condition == c("change6c", "change7c", "change
 
 df.wrangled$rating[df.wrangled$rating == "1 (Not bad at all)"] <- "1"
 df.wrangled$rating[df.wrangled$rating == "7 (Extremely bad)"] <- "7"
-
-View(df.wrangled)
 ```
 
 ```{r write csv file for LIWC processing}
 write.csv(df.wrangled,"nook2017wrangled_data.csv", row.names = FALSE)
 ```
 
-Here, wrangled data is manually edited for spelling errors and exporting issues (e.g. Qualtrics coding apostrophes as other icons). The edited csv was run through LIWC.
+Here, wrangled data was manually edited for spelling errors and exporting issues (e.g. Qualtrics coding apostrophes as other icons). Then, the edited csv was run through LIWC.
 
 ```{r import analyzed data}
 df.LIWC <- read.csv("nook2017LIWC_analyzed_data.csv")
 ```
 
 ```{r prepare data for analyses}
-df.new_variables <- df.LIWC %>% 
-  rename(subject = Source..A.,
-         age = Source..B., 
-         gender = Source..C., 
-         race = Source..D., 
-         condition = Source..E., 
-         written_response = Source..F., 
-         rating = Source..G., 
+df.renamed <- df.LIWC %>% 
+  dplyr::rename(date = Source..A.,
+         subject = Source..B., 
+         attention = Source..C., 
+         age = Source..D., 
+         gender = Source..E., 
+         race = Source..F., 
+         condition = Source..G.,
+         page_submit = Source..H.,
+         written_response = Source..I.,
+         rating = Source..J.,
          six_letter = Sixltr, 
          pronoun = i, 
          positive_affect = posemo, 
          negative_affect = negemo, 
-         discrepancy = discrep) %>% 
-  
-  group_by(subject, condition) %>%
-  mutate(pronoun_rz = -(pronoun - mean(pronoun, na.rm=TRUE))/sd(pronoun, na.rm=TRUE),
-         verb_rz = -(verb - mean(verb, na.rm=TRUE))/sd(verb, na.rm=TRUE),
-         article_z = (article - mean(article, na.rm=TRUE))/sd(article, na.rm=TRUE),
-         discrepancy_rz = -(discrepancy - mean(discrepancy, na.rm=TRUE))/sd(discrepancy, na.rm=TRUE),
-         six_letter_z = (six_letter - mean(six_letter, na.rm=TRUE))/sd(six_letter, na.rm=TRUE),
-         mean_look_rating = ifelse(condition=="look", mean(rating), NA),
-         mean_change_rating = ifelse(condition=="change", mean(rating), NA)) %>% 
-  
-  group_by(subject) %>%
-  mutate(reappraisal = mean(mean_look_rating, na.rm = TRUE) - mean(mean_change_rating, na.rm = TRUE))
+         discrepancy = discrep,
+         verb = present)
 
+#Exclude participants
+df.exclusion <- df.renamed
+
+df.new_variables2 <- df.exclusion %>% 
+  dplyr::group_by(subject, condition) %>%
+  dplyr::mutate(pronoun_rz = -(pronoun - mean(pronoun))/sd(pronoun),
+         verb_rz = -(verb - mean(verb))/sd(verb),
+         article_z = (article - mean(article))/sd(article),
+         discrepancy_rz = -(discrepancy - mean(discrepancy))/sd(discrepancy),
+         six_letter_z = (six_letter - mean(six_letter))/sd(six_letter),
+         mean_rating = mean(rating)) %>%
+  dplyr::group_by(condition)
+
+df.new_variables <- df.new_variables2 %>% 
+  dplyr::group_by(subject, condition) %>% 
+  dplyr::mutate(look_mean_rating = ifelse(condition=="look", mean_rating, NA),
+                change_mean_rating = ifelse(condition=="change", mean_rating, NA)) %>% 
+  dplyr::group_by(subject) %>% 
+  mutate(reappraisal = mean(look_mean_rating, na.rm=TRUE) - mean(change_mean_rating, na.rm=TRUE))
+         
+         #aggregate(rating ~ subject + condition , FUN = mean))
+
+
+        # mean_look_rating = ifelse(condition=="look", mean(rating), NA),
+        # mean_change_rating = ifelse(condition=="change", mean(rating), NA)) %>% 
+  
+ # group_by(subject) %>%
+ # mutate(reappraisal = mean(mean_look_rating, na.rm = TRUE) - mean(mean_change_rating, na.rm = TRUE))
+
+
+
+#df.new_variables$mean_rating <- paste(df.new_variables$mean_look_rating, #df.new_variables$mean_change_rating)
+
+View(df.new_variables)
+```
+
+```{r}
 # Note: I am unsure how to treat the incomputable z-scores, so they may not be set to 0 in the final data analysis.
 df.new_variables$pronoun_rz[df.new_variables$pronoun_rz == "NaN"] <- 0
 df.new_variables$verb_rz[df.new_variables$verb_rz == "NaN"] <- 0
 df.new_variables$article_z[df.new_variables$article_z == "NaN"] <- 0
 df.new_variables$discrepancy_rz[df.new_variables$discrepancy_rz == "NaN"] <- 0
 df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
-  
-df.linguistic_distancing <- df.new_variables %>% 
-  mutate(linguistic_distancing = (pronoun_rz + verb_rz + article_z + discrepancy_rz + six_letter_z)/5,
-         avg_linguistic_distancing = mean(linguistic_distancing))
+```
 
+```{r}
+df.linguistic_distancing2 <- df.new_variables %>% 
+  #dplyr::mutate(linguistic_distancing = (pronoun_rz + verb_rz + article_z + discrepancy_rz + six_letter_z)/n()) %>% 
+  dplyr::group_by(subject, condition) %>% 
+  dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n())
+
+df.linguistic_distancing <- df.linguistic_distancing2 %>% 
+  dplyr::group_by(condition) %>% 
+  dplyr::mutate(avg_linguistic_distancing = mean(linguistic_distancing),
+                grouped_mean_rating = mean(rating))
 
 View(df.linguistic_distancing)
 ```
@@ -267,7 +309,7 @@ View(df.linguistic_distancing)
 _The analyses as specified in the analysis plan._
 
 ```{r t-test}
-t.test(formula = avg_linguistic_distancing ~ condition, data = df.linguistic_distancing)
+t.test(formula = linguistic_distancing ~ condition, data = df.linguistic_distancing)
 ```
 
 ```{r correlations}
@@ -287,11 +329,94 @@ cor.reappraisal_linguistic_distancing <- cor.test(df.linguistic_distancing$reapp
 cor.reappraisal_linguistic_distancing
 ```
 
+```{r}
+df.error <- summarySE(df.linguistic_distancing, measurevar="avg.linguistic_distancing")
+df.error
+```
+
 *Side-by-side graph with original graph is ideal here*
+
+```{r}
+ggplot(df.linguistic_distancing, aes(x=condition, y=(grouped_mean_rating/560))) +
+  geom_col() +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "a", x = "", y = "Self-Reported Negative Affect") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line.x = element_line(color = "black"),
+        axis.line.y = element_line(color = "black")) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+  coord_cartesian(ylim = c(0, 5)) +
+  scale_y_continuous(breaks = seq(from = 0, to = 5, by = 1))
+```
+
+```{r}
+ggplot(df.linguistic_distancing, aes(x=condition, y=(negative_affect/560))) +
+  geom_col() +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "b", x = "", y = "Negative Affect Words") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line.x = element_line(color = "black"),
+        axis.line.y = element_line(color = "black")) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+  coord_cartesian(ylim = c(0, 20)) +
+  scale_y_continuous(breaks = seq(from = 0, to = 20, by = 2)) 
+
+```
+
+```{r}
+ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
+  geom_col() +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "c", x = "", y = "Positive Affect Words") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line.x = element_line(color = "black"),
+        axis.line.y = element_line(color = "black")) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+  coord_cartesian(ylim = c(0, 10)) +
+  scale_y_continuous(breaks = seq(from = 0, to = 10, by = 1)) 
+
+```
+
+```{r graph}
+ggplot(df.linguistic_distancing, aes(x=condition, y=avg_linguistic_distancing)) +
+  geom_col(color = "gray") +
+  geom_hline(yintercept = 0) +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "a", x = "", y = "Linguistic Distancing") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks = element_blank(),
+        axis.line.y = element_line(color = "black")) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative"))
+  
+  # coord_cartesian(ylim = c(-0.2, 0.15)) +
+  # scale_y_continuous(breaks = seq(from = -0.2, to = 0.15, by = 0.05)) 
+```
+
+```{r graph}
+ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(tag = "b", x = "Δ Linguistic Distancing When Reappraising", y = "Reappraisal Success") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.text.y = element_text(vjust = 0),
+        axis.line.x = element_line(color = "black"),
+        axis.line.y = element_line(color = "black"))
+
+```
 
 ### Exploratory analyses
 
-_Any follow-up analyses desired (not required)._
+None
 
 ## Discussion
 
