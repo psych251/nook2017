@@ -8,7 +8,7 @@ Completed through _PSYCH 251: Experimental Methods_ at Stanford University
 
 - _images_: Collection of images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016) and other images used in the attention check
 
-	- _fake_images_: Images which were not part of the experiment, used in the Attention Check
+	- _fake_images_: Images which were not part of the experiment, used in attention check
 
 	- _set_a_: Images from List A
 
