@@ -16,7 +16,7 @@ Completed through _PSYCH 251: Experimental Methods_ at Stanford University
 
 	-  _image_set_comparison_: Code comparing the means and standard deviations of the valence and arousal ratings for the two image lists
 
- _original_paper_: Nook, Schleider, & Somerville (2017)
+- _original_paper_: Nook, Schleider, & Somerville (2017)
 
 - _task_instructions_: Task instuctions from the original study and modified task instructions from the replication study
 
