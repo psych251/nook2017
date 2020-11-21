@@ -12,25 +12,25 @@ output:
 
 ## Introduction
 
-Currently, my research investigates young children's implicit understanding of linguistic politeness. I envisage my future work focusing more broadly on language in social contexts, principally on how children and adolescents use language to construct and reconstruct interpersonal relationships. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing. Emotion regulation plays a crucial role in the way children and adolescents perceive and relate to their environment, and is fundamental to developing successful relationships, which is why I deem it relevant to my research interests.
+Psychological distancing is the psychological process of imagining events as far away (temporally or socially) during emotion regulation. Imagining upsetting images and social situations as happening far away or from a third-person perspective reduces self-reported negative affect (Davis, Gross, & Ochsner, 2011) and reduces biological indices of emotional arousal, like blood pressure and amygdala activity (Ayduk & Kross, 2010).
 
-Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of social and temporal distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings I seek to replicate.
+There are linguistic markers in speech which are indicative of the degree of psychological distance employed by the speaker. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing.
 
-The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of two lists of 20 negative images and one list of 20 neutral images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count (LIWC) program to analyze the text entries for each trial (Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007).
+Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of temporal and social distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings we seek to replicate.
 
-The only anticipated challenges include compiling the stimuli and becoming familiar with mTurk and the LIWC program.
+The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of two lists of 20 negative images and one list of 20 neutral images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count program (LIWC; Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007) to analyze text entries.
 
 Link to project repository: https://github.com/psych251/nook2017
 
 Link to original paper: https://github.com/psych251/nook2017/blob/master/original_paper/nook2017.pdf
 
+Link to pre-registration: https://osf.io/92der
+
 ## Methods
 
 ### Power Analysis
 
-A power analysis in G*Power indicated that 63 participants were required to observe a within-subjects emotion regulation effect (estimated d = 0.36) at p < 0.05 and 80% power. As per the original author's power analysis, the estimated effect size was based on a 2012 emotion regulation meta-analysis (Webb, Miles, & Sheeran).
-
-To observe the same effect with 90% power, 84 participants are required. To observe the same effect with 95% power, 103 participants are required.
+A power analysis in G*Power indicated that 63 participants were required to observe a within-subjects emotion regulation effect (estimated d = 0.36) at p < 0.05 and 80% power. As per the original author's power analysis, the estimated effect size was based on a 2012 emotion regulation meta-analysis (Webb, Miles, & Sheeran). To observe the same effect with 90% power, 84 participants are required. To observe the same effect with 95% power, 103 participants are required.
 
 Due to funding limitations, we may only be able to run 60 participants. If this replication is run with 60 participants, it will be able to detect the estimated effect with 78% power; however, the final power may be less than 78% after accounting for exclusions.
 
@@ -38,7 +38,7 @@ Due to funding limitations, we may only be able to run 60 participants. If this 
 
 Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
 
-The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Like the original study, written responses will be automatically submitted after 30 seconds. 
+The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Responses will be automatically submitted after 30 seconds. 
 
 In our replication, participants will be excluded if:
 
@@ -48,29 +48,29 @@ In our replication, participants will be excluded if:
 - Five or more of their written responses refer to topics other than the images.
 - Two or more of their written responses are word-for-word repeats of another written response.
 
-To ensure compliance with federal minimum wage, participants will be paid $1.50 for completing our survey.
+To ensure compliance with federal minimum wage, participants will be paid $1.50.
 
 ### Materials
 
-The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images [...] The other two lists were both negative, and they were matched for valence (List A: M  = 2.37, SD  = 0.42; List B: M = 2.38, SD = 0.42; item analysis t(38) = -0.12, p = .906) and arousal (List A: M = 4.24, SD = 0.56; List B: M = 4.25, SD = 0.50; t(38) = -0.06, p = .954)."
+The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images... The other two lists were both negative, and they were matched for valence (List A: M  = 2.37, SD  = 0.42; List B: M = 2.38, SD = 0.42; item analysis t(38) = -0.12, p = .906) and arousal (List A: M = 4.24, SD = 0.56; List B: M = 4.25, SD = 0.50; t(38) = -0.06, p = .954)." The authors used these sets to test three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral.
 
-Participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above [...] for 30 s." Participants were told that the cue word 'LOOK' meant they should look at the picture and let themselves feel whatever the image makes them feel. "The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)." 
+Our replication only included two lists (look negative and reappraise negative) of 10 images. While the specific images we used differed from those in the original study, our image sets were matched for valence (List A: M = 2.32, SD = 0.41; List B: M = 2.31, SD = 0.37; t(18) = 0.08, p = .940) and arousal (List A: M = 4.33, SD = 0.55; List B: M = 4.36, SD = 0.57; t(18) = -0.11, p = .912), which were comparable to the original.
 
-"This design divided trials into three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral."
+In the original study, participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above... for 30 s... Participants were told that the cue word 'LOOK' meant that they should 'just look at the picture and let yourself feel whatever that image makes you feel.'... The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)."
 
-Our replication will follow the original authors' design, except that it will only include two lists (look negative and reappraise negative) of 10 images which will be matched for valence (List A: M = 2.32, SD = 0.41; List B: M = 2.31, SD = 0.37; t(18) = 0.08, p = .940) and arousal (List A: M = 4.33, SD = 0.55; List B: M = 4.36, SD = 0.57; t(18) = -0.11, p = .912). We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study.
+Our replication followed the original authors' procedure as detailed above.
 
-The replication paradigm will be set up on Qualtrics and linked for use on mTurk. 
+The replication paradigm was set up on Qualtrics and linked for use on mTurk. 
 
 Link to paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_1SKBE3Rkzs7qibz
 
 ### Procedure	
 
-In the original study, participants "transcribed what they were thinking and feeling about the image into a textbox that appeared below the image" then "rated how they were feeling on a 7-point scale (1 Not bad at all to 7 Extremely bad)." They "completed 20 trials of each condition" and "reported their age, gender, race, and annual family income at the end of the survey."
+In the original study, participants "transcribed what they were thinking and feeling about the image into a textbox that appeared below the image" then "rated how they were feeling on a 7-point scale (1 Not bad at all to 7  Extremely bad)." They "completed 20 trials of each condition" and "reported their age, gender, race, and annual family income at the end of the survey."
 
 "Mapping of list and condition was counterbalanced across participants."
 
-We will precisely follow the original procedure as detailed above, except participants will complete 10 trials of each condition and the mapping of the lists will be counterbalanced.
+We will precisely follow the original procedure as detailed above, except participants will complete 10 trials of each condition and the mapping of the lists will be randomized as opposed to counterbalanced.
 
 ### Analysis Plan
 
@@ -78,7 +78,7 @@ The original researchers "computed each participant’s average negative affect 
 
 Nook et al. "focused linguistic analyses on (a) negative affect words (e.g., hurt, nasty, worried, sad, crying, annoyed), (b) positive affect words (e.g., love, nice, sweet, happy, laughing, cute), and (c) a composite linguistic measure of psychological distancing" (following Mehl, Robbins, & Holleran, 2012). To compute this measure, Nook et al. "z-scored use of first-person singular pronouns (e.g., I, me, my), present-tense verbs, articles (the, a, an), discrepancy words (e.g., would, could, should), and words of more than six letters across trials." They then "reverse-scored the z-scored frequencies of first-person singular pronouns, present-tense verbs, and discrepancy words by multiplying them by -1 and averaged these with the z-scored frequencies of articles and words of more than six letters for each trial." They "averaged this measure of linguistic distancing across trials within each condition for each participant."
 
-To test whether people spontaneously distance their language when regulating emotions, one must determine whether participants' average use of linguistic distancing words (mean z-scored frequencies) differ significant across conditions. Nook et al. "used repeated-measures analyses of variance (ANOVAs) to test for significant differences across the three conditions." When significant effects emerged, they "conducted follow-up paired-samples t tests [the **key analysis of interest**] to assess for differences between the reappraise negative condition and the other two conditions."
+To test whether people spontaneously distance their language when regulating emotions, one must determine whether participants' average use of linguistic distancing words (mean z-scored frequencies) differ significantly across conditions. Nook et al. "used repeated-measures analyses of variance (ANOVAs) to test for significant differences across the three conditions." When significant effects emerged, they "conducted follow-up paired-samples t tests [the **key analysis of interest**] to assess for differences between the reappraise negative condition and the other two conditions."
 
 To test whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation, one must determine whether there is a statistically significant correlation between the extent to which participants increase their use of words encoding psychological distance and the extent to which participants reduce their negative affect when regulating. Nook et al. "created a measure of reappraisal success for each participant by subtracting their average negative affect rating for images in the reappraise negative condition from their average rating for images in the look negative condition." They then "created analogous measures of how much each participant modulated their language when regulating their emotions by subtracting each participant’s average frequency of negative affect words, positive affect words, and linguistic distancing words in the look negative condition from their average use in the reappraise negative condition." Nook et al. "used Pearson’s correlations [the **key analysis of interest**] to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing."
 
@@ -102,19 +102,25 @@ In our replication, participants will be excluded if:
 
 ### Methods Addendum (Post Data Collection)
 
-Our replication used the same task instructions as the original study, with a few additional sentences to inform participants that their responses would submit automatically after 30 seconds and to encourage participants to pay attention. See project repository for a full side-by-side comparison.
-
-The order that the 20 images appeared to participants was randomized.
-
-Participants were not asked to report annual family income as originally planned, but they were asked to report their age, gender, and race at the end of the survey. These questions were not required fields.
-
 #### Actual Sample
 
-_Sample size, demographics, data exclusions based on rules spelled out in analysis plan_
+In our replication, we originally planned to exclude participants if:
+
+- They failed the attention check. (At the end of the survey, participants were presented with 9 images: 5 from the survey and 4 others. Participants were asked to select the images that were part of the survey.)
+- They progressed through five or more trials before 30 seconds had elapsed.
+- Five or more of their written responses did not cite any negative thoughts or emotions.
+- Five or more of their written responses referred to topics other than the images.
+- Two or more of their written responses were word-for-word repeats of another written response.
+
+However, after collecting the data, it was clear that our planned exclusion criteria we too strict, as we would have excluded a significantly greater proportion of participants than the original study. In the below analyses, we have only excluded participants who failed the attention check, leaving 56 participants included in analyses (age: range = 23 - 65, M = 35.5, SD = 8.95; gender: 35 male, 21 female; race: 46 White/Caucasian, 4 Black/African American, 3 Asian/Asian American, 1 American Indian/Alaska Native, 0 Native Hawaiian/Pacific Islander, 2 Other).
 
 #### Differences from pre-data collection methods plan
 
-_Any differences from what was described as the original plan, or “none”._
+Our replication used the same task instructions as the original study, with a few additional sentences to inform participants that their responses would submit automatically after 30 seconds and to encourage participants to pay attention. See project repository for a full comparison.
+
+In our pre-registered procedure, we detailed that the "the mapping of the lists will be randomized as opposed to counterbalanced": a mistype. In our replication, the mapping of list and condition was counterbalanced across participants. The _order_ in which individual images were presented was randomized.
+
+Participants were not asked to report annual family income as originally planned, but they were asked to report their age, gender, and race at the end of the survey. These questions were not required fields.
 
 ## Results
 
@@ -138,7 +144,7 @@ df.tidy <- csv %>%
   
   # Remove unnecessary variables.
   select(-c(EndDate, Status, Progress, Duration..in.seconds., Finished, RecordedDate, UserLanguage, ends_with("Click"), ends_with("Count"), mTurk )) %>% 
-
+  
   # Tidy data.
   unite("look1", "look1time_Page.Submit", look1, look1feeling, sep="__") %>% 
   unite("look1c", "look1ctime_Page.Submit", look1_c, look1feeling_c, sep="__") %>% 
@@ -200,7 +206,8 @@ df.clean <- df.tidy[!(df.tidy$DistributionChannel=="preview" |
 
 df.wrangled <- df.clean %>% 
   separate(response, c("page_submit", "written_response", "rating"), sep ="__") %>% 
-  select(-DistributionChannel)
+  select(-DistributionChannel) %>% 
+  mutate(age=as.numeric(age))
 
 # Rename observations.
 df.wrangled$condition[df.wrangled$condition == c("look1", "look2", "look3", "look4", "look5")] <- "look"
@@ -214,6 +221,29 @@ df.wrangled$condition[df.wrangled$condition == c("change6c", "change7c", "change
 
 df.wrangled$rating[df.wrangled$rating == "1 (Not bad at all)"] <- "1"
 df.wrangled$rating[df.wrangled$rating == "7 (Extremely bad)"] <- "7"
+
+View(df.wrangled)
+```
+
+```{r}
+mean(df.wrangled$age)
+sd(df.wrangled$age)
+range(df.wrangled$age)
+```
+
+```{r gender}
+sum(with(df.wrangled, gender=="Male"))/20
+sum(with(df.wrangled, gender=="Female"))/20
+sum(with(df.wrangled, gender=="Non-binary"))/20
+```
+
+```{r race}
+sum(with(df.wrangled, race=="Black/African American"))/20
+sum(with(df.wrangled, race=="Asian/Asian American"))/20
+sum(with(df.wrangled, race=="White/Caucasian"))/20
+sum(with(df.wrangled, race=="American Indian/Alaska Native"))/20
+sum(with(df.wrangled, race=="Native Hawaiian/Pacific Islander"))/20
+sum(with(df.wrangled, race=="Other"))/20
 ```
 
 ```{r write csv file for LIWC processing}
@@ -264,25 +294,9 @@ df.new_variables <- df.new_variables2 %>%
                 change_mean_rating = ifelse(condition=="change", mean_rating, NA)) %>% 
   dplyr::group_by(subject) %>% 
   mutate(reappraisal = mean(look_mean_rating, na.rm=TRUE) - mean(change_mean_rating, na.rm=TRUE))
-         
-         #aggregate(rating ~ subject + condition , FUN = mean))
-
-
-        # mean_look_rating = ifelse(condition=="look", mean(rating), NA),
-        # mean_change_rating = ifelse(condition=="change", mean(rating), NA)) %>% 
-  
- # group_by(subject) %>%
- # mutate(reappraisal = mean(mean_look_rating, na.rm = TRUE) - mean(mean_change_rating, na.rm = TRUE))
-
-
-
-#df.new_variables$mean_rating <- paste(df.new_variables$mean_look_rating, #df.new_variables$mean_change_rating)
-
-View(df.new_variables)
 ```
 
 ```{r}
-# Note: I am unsure how to treat the incomputable z-scores, so they may not be set to 0 in the final data analysis.
 df.new_variables$pronoun_rz[df.new_variables$pronoun_rz == "NaN"] <- 0
 df.new_variables$verb_rz[df.new_variables$verb_rz == "NaN"] <- 0
 df.new_variables$article_z[df.new_variables$article_z == "NaN"] <- 0
@@ -291,8 +305,7 @@ df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
 ```
 
 ```{r}
-df.linguistic_distancing2 <- df.new_variables %>% 
-  #dplyr::mutate(linguistic_distancing = (pronoun_rz + verb_rz + article_z + discrepancy_rz + six_letter_z)/n()) %>% 
+df.linguistic_distancing2 <- df.new_variables %>%  
   dplyr::group_by(subject, condition) %>% 
   dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n())
 
@@ -313,6 +326,11 @@ t.test(formula = linguistic_distancing ~ condition, data = df.linguistic_distanc
 ```
 
 ```{r correlations}
+cor.reappraisal_linguistic_distancing <- cor.test(df.linguistic_distancing$reappraisal, 
+                                                  df.linguistic_distancing$linguistic_distancing, 
+                                                  method = "pearson")
+cor.reappraisal_linguistic_distancing
+
 cor_reappraisal_positive_affect <- cor.test(df.linguistic_distancing$reappraisal, 
                                             df.linguistic_distancing$positive_affect, 
                                             method = "pearson")
@@ -323,10 +341,6 @@ cor.reappraisal_negative_affect <- cor.test(df.linguistic_distancing$reappraisal
                                             method = "pearson")
 cor.reappraisal_negative_affect
 
-cor.reappraisal_linguistic_distancing <- cor.test(df.linguistic_distancing$reappraisal, 
-                                                  df.linguistic_distancing$linguistic_distancing, 
-                                                  method = "pearson")
-cor.reappraisal_linguistic_distancing
 ```
 
 ```{r}
@@ -337,18 +351,50 @@ df.error
 *Side-by-side graph with original graph is ideal here*
 
 ```{r}
+sum(df.linguistic_distancing$avg_linguistic_distancing)
+```
+
+
+```{r graph}
+ggplot(df.linguistic_distancing, aes(x=condition, y=(avg_linguistic_distancing/560))) +
+  geom_col(color = "gray") +
+  geom_hline(yintercept = 0) +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "a", x = "", y = "Linguistic Distancing") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks = element_blank(),
+        axis.line.y = element_line(color = "black"),
+        text = element_text(size=20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+  coord_cartesian(ylim = c(-1e-17, 2e-17)) +
+  scale_y_continuous(breaks = seq(from = -1e-17, to = 2e-17, by = 5e-18)) +
+  annotate("text", x = 1.5, y = 2e-17, label = "***", size = 10)
+```
+```{r}
+t.test(formula = mean_rating ~ condition, data = df.linguistic_distancing)
+```
+
+```{r}
 ggplot(df.linguistic_distancing, aes(x=condition, y=(grouped_mean_rating/560))) +
-  geom_col() +
+  geom_col(color = "gray") +
   #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
   labs(tag = "a", x = "", y = "Self-Reported Negative Affect") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black")) +
+        axis.line.y = element_line(color = "black"),
+        text = element_text(size=18)) +
   scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
   coord_cartesian(ylim = c(0, 5)) +
-  scale_y_continuous(breaks = seq(from = 0, to = 5, by = 1))
+  scale_y_continuous(breaks = seq(from = 0, to = 5, by = 1)) +
+  annotate("text", x = 1.5, y = 5, label = "***", size = 10)
+```
+
+```{r}
+t.test(formula = negative_affect ~ condition, data = df.linguistic_distancing)
 ```
 
 ```{r}
@@ -360,11 +406,17 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(negative_affect/560))) +
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black")) +
+        axis.line.y = element_line(color = "black"),
+        text = element_text(size=18)) +
   scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
   coord_cartesian(ylim = c(0, 20)) +
   scale_y_continuous(breaks = seq(from = 0, to = 20, by = 2)) 
 
+```
+
+
+```{r}
+t.test(formula = positive_affect ~ condition, data = df.linguistic_distancing)
 ```
 
 ```{r}
@@ -376,7 +428,8 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black")) +
+        axis.line.y = element_line(color = "black"),
+        text = element_text(size=18)) +
   scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
   coord_cartesian(ylim = c(0, 10)) +
   scale_y_continuous(breaks = seq(from = 0, to = 10, by = 1)) 
@@ -384,33 +437,21 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
 ```
 
 ```{r graph}
-ggplot(df.linguistic_distancing, aes(x=condition, y=avg_linguistic_distancing)) +
-  geom_col(color = "gray") +
-  geom_hline(yintercept = 0) +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
-  labs(tag = "a", x = "", y = "Linguistic Distancing") +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank(),
-        axis.line.y = element_line(color = "black")) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative"))
-  
-  # coord_cartesian(ylim = c(-0.2, 0.15)) +
-  # scale_y_continuous(breaks = seq(from = -0.2, to = 0.15, by = 0.05)) 
-```
-
-```{r graph}
 ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
-  geom_point() +
+  geom_point(size = 2) +
   geom_smooth(method = "lm") +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
   labs(tag = "b", x = "Δ Linguistic Distancing When Reappraising", y = "Reappraisal Success") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         axis.text.y = element_text(vjust = 0),
-        axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black"))
+        axis.line.x = element_blank(),
+        axis.line.y = element_blank(),
+        text = element_text(size=20)) +
+  coord_cartesian(xlim = c(-5e-16, 6e-16)) +
+  scale_x_continuous(breaks = seq(from = -5e-16, to = 6e-16, by = 2e-16))
 
 ```
 
