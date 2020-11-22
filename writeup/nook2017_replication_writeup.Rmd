@@ -191,7 +191,7 @@ df.tidy <- csv %>%
                names_to = "condition",
                values_to = "response") %>% 
   
-  # Remove failed attention checks and old data.
+  # Remove failed attention checks (exclusions) and pilot data.
   filter(str_detect(attention, "n", negate = TRUE)) %>% 
   filter(str_detect(StartDate, "10-18", negate = TRUE)) %>% 
   filter(str_detect(StartDate, "11-04", negate = TRUE)) %>% 
@@ -206,7 +206,7 @@ df.clean <- df.tidy[!(df.tidy$DistributionChannel=="preview" |
 
 df.wrangled <- df.clean %>% 
   separate(response, c("page_submit", "written_response", "rating"), sep ="__") %>% 
-  select(-DistributionChannel) %>% 
+  select(-DistributionChannel) %>%
   mutate(age=as.numeric(age))
 
 # Rename observations.
@@ -221,23 +221,21 @@ df.wrangled$condition[df.wrangled$condition == c("change6c", "change7c", "change
 
 df.wrangled$rating[df.wrangled$rating == "1 (Not bad at all)"] <- "1"
 df.wrangled$rating[df.wrangled$rating == "7 (Extremely bad)"] <- "7"
-
-View(df.wrangled)
 ```
 
-```{r}
+```{r age stats}
+range(df.wrangled$age)
 mean(df.wrangled$age)
 sd(df.wrangled$age)
-range(df.wrangled$age)
 ```
 
-```{r gender}
+```{r gender stats}
 sum(with(df.wrangled, gender=="Male"))/20
 sum(with(df.wrangled, gender=="Female"))/20
 sum(with(df.wrangled, gender=="Non-binary"))/20
 ```
 
-```{r race}
+```{r race stats}
 sum(with(df.wrangled, race=="Black/African American"))/20
 sum(with(df.wrangled, race=="Asian/Asian American"))/20
 sum(with(df.wrangled, race=="White/Caucasian"))/20
@@ -250,13 +248,13 @@ sum(with(df.wrangled, race=="Other"))/20
 write.csv(df.wrangled,"nook2017wrangled_data.csv", row.names = FALSE)
 ```
 
-Here, wrangled data was manually edited for spelling errors and exporting issues (e.g. Qualtrics coding apostrophes as other icons). Then, the edited csv was run through LIWC.
+Here, wrangled data was manually edited for spelling errors. Then, the edited CSV file was run through LIWC.
 
 ```{r import analyzed data}
 df.LIWC <- read.csv("nook2017LIWC_analyzed_data.csv")
 ```
 
-```{r prepare data for analyses}
+```{r prepare data}
 df.renamed <- df.LIWC %>% 
   dplyr::rename(date = Source..A.,
          subject = Source..B., 
@@ -275,25 +273,23 @@ df.renamed <- df.LIWC %>%
          discrepancy = discrep,
          verb = present)
 
-#Exclude participants
-df.exclusion <- df.renamed
-
-df.new_variables2 <- df.exclusion %>% 
+# Create z-scores and reverse z-scores of linguistic markers.
+df.z_variables <- df.renamed %>% 
   dplyr::group_by(subject, condition) %>%
   dplyr::mutate(pronoun_rz = -(pronoun - mean(pronoun))/sd(pronoun),
          verb_rz = -(verb - mean(verb))/sd(verb),
          article_z = (article - mean(article))/sd(article),
          discrepancy_rz = -(discrepancy - mean(discrepancy))/sd(discrepancy),
          six_letter_z = (six_letter - mean(six_letter))/sd(six_letter),
-         mean_rating = mean(rating)) %>%
-  dplyr::group_by(condition)
+         mean_rating = mean(rating))
 
-df.new_variables <- df.new_variables2 %>% 
+df.new_variables <- df.z_variables %>% 
   dplyr::group_by(subject, condition) %>% 
   dplyr::mutate(look_mean_rating = ifelse(condition=="look", mean_rating, NA),
                 change_mean_rating = ifelse(condition=="change", mean_rating, NA)) %>% 
   dplyr::group_by(subject) %>% 
-  mutate(reappraisal = mean(look_mean_rating, na.rm=TRUE) - mean(change_mean_rating, na.rm=TRUE))
+  mutate(reappraisal = mean(look_mean_rating, na.rm=TRUE) - mean(change_mean_rating, na.rm=TRUE)) %>% 
+  select(-c(look_mean_rating, change_mean_rating))
 ```
 
 ```{r}
@@ -305,16 +301,14 @@ df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
 ```
 
 ```{r}
-df.linguistic_distancing2 <- df.new_variables %>%  
+df.linguistic_distancing_b <- df.new_variables %>%  
   dplyr::group_by(subject, condition) %>% 
   dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n())
 
-df.linguistic_distancing <- df.linguistic_distancing2 %>% 
+df.linguistic_distancing <- df.linguistic_distancing_b %>% 
   dplyr::group_by(condition) %>% 
   dplyr::mutate(avg_linguistic_distancing = mean(linguistic_distancing),
                 grouped_mean_rating = mean(rating))
-
-View(df.linguistic_distancing)
 ```
 
 ### Confirmatory analysis
@@ -343,38 +337,9 @@ cor.reappraisal_negative_affect
 
 ```
 
-```{r}
-df.error <- summarySE(df.linguistic_distancing, measurevar="avg.linguistic_distancing")
-df.error
-```
-
 *Side-by-side graph with original graph is ideal here*
 
-```{r}
-sum(df.linguistic_distancing$avg_linguistic_distancing)
-```
-
-
-```{r graph}
-ggplot(df.linguistic_distancing, aes(x=condition, y=(avg_linguistic_distancing/560))) +
-  geom_col(color = "gray") +
-  geom_hline(yintercept = 0) +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
-  labs(tag = "a", x = "", y = "Linguistic Distancing") +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank(),
-        axis.line.y = element_line(color = "black"),
-        text = element_text(size=20)) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
-  coord_cartesian(ylim = c(-1e-17, 2e-17)) +
-  scale_y_continuous(breaks = seq(from = -1e-17, to = 2e-17, by = 5e-18)) +
-  annotate("text", x = 1.5, y = 2e-17, label = "***", size = 10)
-```
-```{r}
-t.test(formula = mean_rating ~ condition, data = df.linguistic_distancing)
-```
+![Original: Average self-reported affect for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/negative_affect_by_condition.png)
 
 ```{r}
 ggplot(df.linguistic_distancing, aes(x=condition, y=(grouped_mean_rating/560))) +
@@ -394,9 +359,10 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(grouped_mean_rating/560))) 
 ```
 
 ```{r}
-t.test(formula = negative_affect ~ condition, data = df.linguistic_distancing)
+t.test(formula = mean_rating ~ condition, data = df.linguistic_distancing)
 ```
 
+![Original: Average negative affect word use for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/negative_affect_words_by_condition.png)
 ```{r}
 ggplot(df.linguistic_distancing, aes(x=condition, y=(negative_affect/560))) +
   geom_col() +
@@ -414,10 +380,11 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(negative_affect/560))) +
 
 ```
 
-
 ```{r}
-t.test(formula = positive_affect ~ condition, data = df.linguistic_distancing)
+t.test(formula = negative_affect ~ condition, data = df.linguistic_distancing)
 ```
+
+![Original: Average positive affect word use for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/positive_affect_words_by_condition.png)
 
 ```{r}
 ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
@@ -436,7 +403,33 @@ ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
 
 ```
 
+```{r}
+t.test(formula = positive_affect ~ condition, data = df.linguistic_distancing)
+```
+
+![Original: Average use of linguistic distancing words (mean z-scored frequencies) in each condition. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/linguistic_distancing_by_condition.png)
+
 ```{r graph}
+ggplot(df.linguistic_distancing, aes(x=condition, y=(avg_linguistic_distancing/560))) +
+  geom_col(color = "gray") +
+  geom_hline(yintercept = 0) +
+  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+  labs(tag = "a", x = "", y = "Linguistic Distancing") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks = element_blank(),
+        axis.line.y = element_line(color = "black"),
+        text = element_text(size=20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+  coord_cartesian(ylim = c(-1e-17, 2e-17)) +
+  scale_y_continuous(breaks = seq(from = -1e-17, to = 2e-17, by = 5e-18)) +
+  annotate("text", x = 1.5, y = 2e-17, label = "***", size = 10)
+```
+
+![Original: Scatterplot showing the relation between reappraisal success (the extent to which participants reduced their negative affect when regulating) and the extent to which participants increased their use of words encoding psychological distance when regulating. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/reappraisal_success_by_change_in_linguistic_distancing.png)
+
+```{r graph2}
 ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
   geom_point(size = 2) +
   geom_smooth(method = "lm") +
