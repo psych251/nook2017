@@ -126,13 +126,15 @@ Participants were not asked to report annual family income as originally planned
 
 ### Data preparation
 
-```{r load libraries, message=FALSE}
+```{r load libraries, message=FALSE, warning=FALSE}
 library(tidyr)
 library(stringr)
 library(ggplot2)
 library(Rmisc)
 library(dplyr)
 library(ggsignif)
+library(rstatix)
+library(ggpubr)
 ```
 
 ```{r import data}
@@ -292,7 +294,7 @@ df.new_variables <- df.z_variables %>%
   select(-c(look_mean_rating, change_mean_rating))
 ```
 
-```{r}
+```{r NaN}
 df.new_variables$pronoun_rz[df.new_variables$pronoun_rz == "NaN"] <- 0
 df.new_variables$verb_rz[df.new_variables$verb_rz == "NaN"] <- 0
 df.new_variables$article_z[df.new_variables$article_z == "NaN"] <- 0
@@ -300,7 +302,7 @@ df.new_variables$discrepancy_rz[df.new_variables$discrepancy_rz == "NaN"] <- 0
 df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
 ```
 
-```{r}
+```{r linguistic distancing}
 df.linguistic_distancing_b <- df.new_variables %>%  
   dplyr::group_by(subject, condition) %>% 
   dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n())
@@ -308,14 +310,43 @@ df.linguistic_distancing_b <- df.new_variables %>%
 df.linguistic_distancing <- df.linguistic_distancing_b %>% 
   dplyr::group_by(condition) %>% 
   dplyr::mutate(avg_linguistic_distancing = mean(linguistic_distancing),
-                grouped_mean_rating = mean(rating))
+                grouped_mean_rating = mean(rating)) %>% 
+  ungroup()
 ```
 
 ### Confirmatory analysis
 
-_The analyses as specified in the analysis plan._
+Prior to conducting the repeated-measures ANOVAs, we checked the data by identifying extreme outliers and assessing normality.
 
-```{r t-test}
+```{r outliers}
+df.linguistic_distancing %>%
+  group_by(condition) %>%
+  identify_outliers(linguistic_distancing)
+```
+
+```{r shapiro test}
+df.linguistic_distancing %>%
+  group_by(condition) %>%
+  shapiro_test(linguistic_distancing)
+```
+
+```{r QQ plots}
+ggqqplot(df.linguistic_distancing, "linguistic_distancing", facet.by = "condition")
+```
+Because the Shapiro-Wilk test becomes very sensitive even to a minor deviation from normality at larger sample sizes, we created QQ plots for each condition. Our data was not normally distributed, and so we were unable to conduct the repeated-measures ANOVA (code below).
+
+```{r anova, eval = FALSE}
+anova.linguistic_distancing <- anova_test(data = df.linguistic_distancing, dv = linguistic_distancing, wid = subject, within = condition)
+
+get_anova_table(anova.linguistic_distancing)
+```
+
+Our two **key analyses of interest** included:
+
+- A paired-samples t tests (to assess for differences between the reappraise negative condition and the other two conditions).
+- Pearson’s correlations (to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing).
+
+```{r linguistic distancing t-test}
 t.test(formula = linguistic_distancing ~ condition, data = df.linguistic_distancing)
 ```
 
@@ -337,120 +368,143 @@ cor.reappraisal_negative_affect
 
 ```
 
-*Side-by-side graph with original graph is ideal here*
+![Original: Average use of linguistic distancing words (mean z-scored frequencies) in each condition. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/linguistic_distancing_by_condition.png)
 
-![Original: Average self-reported affect for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/negative_affect_by_condition.png)
-
-```{r}
-ggplot(df.linguistic_distancing, aes(x=condition, y=(grouped_mean_rating/560))) +
-  geom_col(color = "gray") +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
-  labs(tag = "a", x = "", y = "Self-Reported Negative Affect") +
+```{r linguistic distancing visualization}
+ggplot(df.linguistic_distancing, aes(x=condition, y=linguistic_distancing)) +
+      stat_summary(fun = "mean",
+               geom = "bar",
+               color = "black",
+               fill = "gray",
+               width = 0.3) +
+  stat_summary(fun.data=mean_cl_boot, geom="errorbar", width=.08) +
+  geom_hline(yintercept = 0, size = 1) +
+  labs(tag = "a", x = "", y = "Linguistic Distancing") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black"),
-        text = element_text(size=18)) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
-  coord_cartesian(ylim = c(0, 5)) +
-  scale_y_continuous(breaks = seq(from = 0, to = 5, by = 1)) +
-  annotate("text", x = 1.5, y = 5, label = "***", size = 10)
+        axis.line.x = element_blank(),
+        axis.line.y = element_line(color = "black", size = 1),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_line(size = 1),
+        text = element_text(size = 20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c(expression(atop("Look", paste("Negative"))), expression(atop("Reappraise", paste("Negative"))))) +
+  coord_cartesian(ylim = c(-2e-17, 4e-17)) +
+  scale_y_continuous(breaks = seq(from = -2e-17, to = 4e-17, by = 1e-17)) +
+  annotate("text", x = 1.5, y = 3.5e-17, label = "***", size = 10)
 ```
 
-```{r}
+![Original: Scatterplot showing the relation between reappraisal success (the extent to which participants reduced their negative affect when regulating) and the extent to which participants increased their use of words encoding psychological distance when regulating. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/reappraisal_success_by_change_in_linguistic_distancing.png)
+
+```{r reappriasal success visualization, message=FALSE}
+ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
+        stat_summary(geom = "point", size = 0.2) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm") +
+  geom_vline(xintercept = 0, size = 1) +
+  geom_hline(yintercept = 0, size = 1) +
+  labs(tag = "b", x = c(expression(atop(Delta~"Linguistic Distancing", paste("When Reappraising")))), y = "Reappraisal Success") +
+    theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.text.y = element_text(vjust = 0),
+        axis.line.x = element_blank(),
+        axis.line.y = element_line(color = "black", size = 1),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        text = element_text(size = 20)) +
+  coord_cartesian(xlim = c(-5e-16, 6e-16)) +
+  scale_x_continuous(breaks = seq(from = -5e-16, to = 6e-16, by = 2e-16))
+```
+
+### Exploratory analyses
+
+In addition to attempting to replicate the key analyses of interest, as per our pre-registration, we also attempted to replicate the other visualizations from the original paper.
+
+![Original: Average self-reported affect for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/negative_affect_by_condition.png)
+
+```{r negative affect visualization}
+ggplot(df.linguistic_distancing, aes(x=condition, y=rating), aes()) +
+  stat_summary(fun = "mean",
+               geom = "bar",
+               color = "black",
+               fill = "gray",
+               width = 0.3) +
+  stat_summary(fun.data=mean_cl_boot, geom="errorbar", width=0.08) +
+  labs(tag = "a", x = "") +
+  ylab(expression(atop("Self-Reported", paste("Negative Affect")))) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line.x = element_line(color = "black", size = 1),
+        axis.line.y = element_line(color = "black", size = 1),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_line(size = 1),
+        text = element_text(size = 20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c(expression(atop("Look", paste("Negative"))), expression(atop("Reappraise", paste("Negative"))))) +
+  scale_y_continuous(breaks = seq(from = 0, to = 7, by = 1), expand = c(0, 0), limits = c(0, 7)) +
+  annotate("text", x = 1.5, y = 6, label = "***", size = 10)
+```
+
+```{r negative affect t-test}
 t.test(formula = mean_rating ~ condition, data = df.linguistic_distancing)
 ```
 
 ![Original: Average negative affect word use for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/negative_affect_words_by_condition.png)
-```{r}
-ggplot(df.linguistic_distancing, aes(x=condition, y=(negative_affect/560))) +
-  geom_col() +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+
+```{r negative affect words visualization}
+ggplot(df.linguistic_distancing, aes(x=condition, y = negative_affect)) +
+  stat_summary(fun = "mean",
+               geom = "bar",
+               color = "black",
+               fill = "gray",
+               width = 0.3) +
+  stat_summary(fun.data=mean_cl_boot, geom="errorbar", width=0.08) +
   labs(tag = "b", x = "", y = "Negative Affect Words") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black"),
-        text = element_text(size=18)) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+        axis.line.x = element_line(color = "black", size = 1),
+        axis.line.y = element_line(color = "black", size = 1),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_line(size = 1),
+        axis.text.x = element_text(size = 20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c(expression(atop("Look", paste("Negative"))), expression(atop("Reappraise", paste("Negative"))))) +
   coord_cartesian(ylim = c(0, 20)) +
-  scale_y_continuous(breaks = seq(from = 0, to = 20, by = 2)) 
-
+  scale_y_continuous(breaks = seq(from = 0, to = 20, by = 2), expand = c(0, 0), labels = function(x) paste0(x, "%"))
 ```
 
-```{r}
+```{r negative affect words t-test}
 t.test(formula = negative_affect ~ condition, data = df.linguistic_distancing)
 ```
 
 ![Original: Average positive affect word use for each condition. Error bars are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). *** p < .001.](images_in_writeup/positive_affect_words_by_condition.png)
 
-```{r}
-ggplot(df.linguistic_distancing, aes(x=condition, y=(positive_affect/560))) +
-  geom_col() +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
+```{r positive affect words visualization}
+ggplot(df.linguistic_distancing, aes(x=condition, y=positive_affect)) +
+    stat_summary(fun = "mean",
+               geom = "bar",
+               color = "black",
+               fill = "gray",
+               width = 0.3) +
+  stat_summary(fun.data=mean_cl_boot, geom="errorbar", width=0.08) +
   labs(tag = "c", x = "", y = "Positive Affect Words") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        axis.line.x = element_line(color = "black"),
-        axis.line.y = element_line(color = "black"),
-        text = element_text(size=18)) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
+        axis.line.x = element_line(color = "black", size = 1),
+        axis.line.y = element_line(color = "black", size = 1),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_line(size = 1),
+        text = element_text(size = 20)) +
+  scale_x_discrete(limits = c("look", "change"), labels = c(expression(atop("Look", paste("Negative"))), expression(atop("Reappraise", paste("Negative"))))) +
   coord_cartesian(ylim = c(0, 10)) +
-  scale_y_continuous(breaks = seq(from = 0, to = 10, by = 1)) 
-
+  scale_y_continuous(breaks = seq(from = 0, to = 10, by = 1), expand = c(0, 0), labels = function(x) paste0(x, "%")) 
 ```
 
-```{r}
+```{r positive affect words t-test}
 t.test(formula = positive_affect ~ condition, data = df.linguistic_distancing)
 ```
-
-![Original: Average use of linguistic distancing words (mean z-scored frequencies) in each condition. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/linguistic_distancing_by_condition.png)
-
-```{r graph}
-ggplot(df.linguistic_distancing, aes(x=condition, y=(avg_linguistic_distancing/560))) +
-  geom_col(color = "gray") +
-  geom_hline(yintercept = 0) +
-  #geom_errorbar(aes(ymin = len, ymax = len+sd), width = 0.2) +
-  labs(tag = "a", x = "", y = "Linguistic Distancing") +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank(),
-        axis.line.y = element_line(color = "black"),
-        text = element_text(size=20)) +
-  scale_x_discrete(limits = c("look", "change"), labels = c("Look Negative", "Reappraise Negative")) +
-  coord_cartesian(ylim = c(-1e-17, 2e-17)) +
-  scale_y_continuous(breaks = seq(from = -1e-17, to = 2e-17, by = 5e-18)) +
-  annotate("text", x = 1.5, y = 2e-17, label = "***", size = 10)
-```
-
-![Original: Scatterplot showing the relation between reappraisal success (the extent to which participants reduced their negative affect when regulating) and the extent to which participants increased their use of words encoding psychological distance when regulating. Error bars are are 95% confidence intervals, adjusted for within-subjects comparisons following Morey (2008). ** p < .01. *** p < .001.](images_in_writeup/reappraisal_success_by_change_in_linguistic_distancing.png)
-
-```{r graph2}
-ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
-  geom_point(size = 2) +
-  geom_smooth(method = "lm") +
-  geom_vline(xintercept = 0) +
-  geom_hline(yintercept = 0) +
-  labs(tag = "b", x = "Δ Linguistic Distancing When Reappraising", y = "Reappraisal Success") +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        axis.text.y = element_text(vjust = 0),
-        axis.line.x = element_blank(),
-        axis.line.y = element_blank(),
-        text = element_text(size=20)) +
-  coord_cartesian(xlim = c(-5e-16, 6e-16)) +
-  scale_x_continuous(breaks = seq(from = -5e-16, to = 6e-16, by = 2e-16))
-
-```
-
-### Exploratory analyses
-
-None
 
 ## Discussion
 
