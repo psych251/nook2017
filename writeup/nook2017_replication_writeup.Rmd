@@ -14,11 +14,15 @@ output:
 
 Psychological distancing is the psychological process of imagining events as far away (temporally or socially) during emotion regulation. Imagining upsetting images and social situations as happening far away or from a third-person perspective reduces self-reported negative affect (Davis, Gross, & Ochsner, 2011) and reduces biological indices of emotional arousal, like blood pressure and amygdala activity (Ayduk & Kross, 2010).
 
-There are linguistic markers in speech which are indicative of the degree of psychological distance employed by the speaker. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing.
+There are linguistic markers in speech which are indicative of the degree of psychological distance employed by a speaker. Nook et al. (2017) explore bidirectional relations between emotion regulation and linguistic signatures of psychological distancing.
 
 Study 1 assessed (1) whether people spontaneously distance their language when regulating emotions and (2) whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation; it found that emotion regulation increased linguistic markers of temporal and social distance, and participants who showed greater linguistic distancing were more successful regulators. These are the findings we seek to replicate.
 
-The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (mTurk). The original stimuli consisted of two lists of 20 negative images and one list of 20 neutral images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count program (LIWC; Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007) to analyze text entries.
+The original researchers adapted Ochsner, Bunge, Gross, & Gabrieli's (2002) emotion regulation paradigm for use on Amazon Mechanical Turk (MTurk). The original stimuli consisted of two lists of 20 negative images and one list of 20 neutral images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). 115 MTurk participants saw the cue word "LOOK" or "CHANGE" above an image for 30 seconds, which indicated whether they should react naturally or regulate their emotions by reappraising the meaning of the image, respectively. Participants were instructed to transcribe what they were thinking and feeling into a textbox. The original researchers used Pennebaker's Linguistic Inquiry and Word Count program (LIWC; Pennebaker, Chung, Ireland, Gonzales, & Booth, 2007) to analyze text entries.
+
+### Justification for Choice of Experiment
+
+Currently, my research investigates young children's implicit understanding of linguistic politeness. I envisage my future work focusing more broadly on language in social contexts, principally on how children and adolescents use language to construct and reconstruct interpersonal relationships. Emotion regulation plays a crucial role in the way children and adolescents perceive and relate to their environment, and is fundamental to developing successful relationships, which is why I deem it relevant to my research interests.
 
 Link to project repository: https://github.com/psych251/nook2017
 
@@ -36,7 +40,7 @@ Due to funding limitations, we may only be able to run 60 participants. If this 
 
 ### Planned Sample
 
-Like the original Nook et al. study, our replication will sample from mTurk workers located in the United States who have at least a 95% task approval rate.
+Like the original Nook et al. study, our replication will sample from MTurk workers located in the United States who have at least a 95% task approval rate.
 
 The original researchers "excluded eight participants who consistently progressed through trials without writing for a full 30 s and five who wrote about topics other than the images". Responses will be automatically submitted after 30 seconds. 
 
@@ -54,13 +58,13 @@ To ensure compliance with federal minimum wage, participants will be paid $1.50.
 
 The original researchers "assembled three lists of 20 images from the Open Affective Standardized Image Set (OASIS; Kurdi, Lozano, & Banaji, 2016). One list included only neutral images... The other two lists were both negative, and they were matched for valence (List A: M  = 2.37, SD  = 0.42; List B: M = 2.38, SD = 0.42; item analysis t(38) = -0.12, p = .906) and arousal (List A: M = 4.24, SD = 0.56; List B: M = 4.25, SD = 0.50; t(38) = -0.06, p = .954)." The authors used these sets to test three conditions: (a) look negative, (b) reappraise negative, and (c) look neutral.
 
-Our replication only included two lists (look negative and reappraise negative) of 10 images. While the specific images we used differed from those in the original study, our image sets were matched for valence (List A: M = 2.32, SD = 0.41; List B: M = 2.31, SD = 0.37; t(18) = 0.08, p = .940) and arousal (List A: M = 4.33, SD = 0.55; List B: M = 4.36, SD = 0.57; t(18) = -0.11, p = .912), which were comparable to the original.
+Our replication will only include two lists (look negative and reappraise negative) of 10 images. While the specific images we will use differ from those in the original study, our image lists have been matched for valence (List A: M = 2.32, SD = 0.41; List B: M = 2.31, SD = 0.37; t(18) = 0.08, p = .940) and arousal (List A: M = 4.33, SD = 0.55; List B: M = 4.36, SD = 0.57; t(18) = -0.11, p = .912), and are comparable to the originals.
 
 In the original study, participants were shown the 60 images, each with "the cue word 'LOOK' or the cue word 'CHANGE' above... for 30 s... Participants were told that the cue word 'LOOK' meant that they should 'just look at the picture and let yourself feel whatever that image makes you feel.'... The cue word 'CHANGE' indicated that they should regulate their emotions by reappraising the meaning of the image (Gross, 1998, 2015). Critically, participants were not instructed to reappraise the image by imagining it as far away from them. Instead, they were instructed to reinterpret the meaning of the image to make it less negative (e.g. imagine that the objects are fake or that something good is about to happen)."
 
-Our replication followed the original authors' procedure as detailed above.
+Our replication will follow the original authors' procedure as detailed above.
 
-The replication paradigm was set up on Qualtrics and linked for use on mTurk. 
+The replication paradigm has been set up on Qualtrics and linked for use on MTurk. 
 
 Link to paradigm: https://stanforduniversity.qualtrics.com/jfe/form/SV_1SKBE3Rkzs7qibz
 
@@ -78,9 +82,9 @@ The original researchers "computed each participant’s average negative affect 
 
 Nook et al. "focused linguistic analyses on (a) negative affect words (e.g., hurt, nasty, worried, sad, crying, annoyed), (b) positive affect words (e.g., love, nice, sweet, happy, laughing, cute), and (c) a composite linguistic measure of psychological distancing" (following Mehl, Robbins, & Holleran, 2012). To compute this measure, Nook et al. "z-scored use of first-person singular pronouns (e.g., I, me, my), present-tense verbs, articles (the, a, an), discrepancy words (e.g., would, could, should), and words of more than six letters across trials." They then "reverse-scored the z-scored frequencies of first-person singular pronouns, present-tense verbs, and discrepancy words by multiplying them by -1 and averaged these with the z-scored frequencies of articles and words of more than six letters for each trial." They "averaged this measure of linguistic distancing across trials within each condition for each participant."
 
-To test whether people spontaneously distance their language when regulating emotions, one must determine whether participants' average use of linguistic distancing words (mean z-scored frequencies) differ significantly across conditions. Nook et al. "used repeated-measures analyses of variance (ANOVAs) to test for significant differences across the three conditions." When significant effects emerged, they "conducted follow-up paired-samples t tests [the **key analysis of interest**] to assess for differences between the reappraise negative condition and the other two conditions."
+To test whether people spontaneously distance their language when regulating emotions, one must determine whether participants' average use of linguistic distancing words (mean z-scored frequencies) differ significantly across conditions. Nook et al. "used repeated-measures analyses of variance (ANOVAs) to test for significant differences across the three conditions." When significant effects emerged, they "conducted follow-up paired-samples t tests [a **key analysis of interest**] to assess for differences between the reappraise negative condition and the other two conditions."
 
-To test whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation, one must determine whether there is a statistically significant correlation between the extent to which participants increase their use of words encoding psychological distance and the extent to which participants reduce their negative affect when regulating. Nook et al. "created a measure of reappraisal success for each participant by subtracting their average negative affect rating for images in the reappraise negative condition from their average rating for images in the look negative condition." They then "created analogous measures of how much each participant modulated their language when regulating their emotions by subtracting each participant’s average frequency of negative affect words, positive affect words, and linguistic distancing words in the look negative condition from their average use in the reappraise negative condition." Nook et al. "used Pearson’s correlations [the **key analysis of interest**] to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing."
+To test whether the tendency to use more psychologically distant language when regulating emotions is associated with more successful regulation, one must determine whether there is a statistically significant correlation between the extent to which participants increase their use of words encoding psychological distance and the extent to which participants reduce their negative affect when regulating. Nook et al. "created a measure of reappraisal success for each participant by subtracting their average negative affect rating for images in the reappraise negative condition from their average rating for images in the look negative condition." They then "created analogous measures of how much each participant modulated their language when regulating their emotions by subtracting each participant’s average frequency of negative affect words, positive affect words, and linguistic distancing words in the look negative condition from their average use in the reappraise negative condition." Nook et al. "used Pearson’s correlations [a **key analysis of interest**] to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing."
 
 We will precisely follow the original analysis plan as detailed above.
 
@@ -90,7 +94,7 @@ To ensure compliance with federal minimum wage, participants will be paid $1.50 
 
 Our replication will only include two lists (look negative and reappraise negative) of 10 images. We will use the same standard to select and group images from OASIS; however, the specific images will differ from those used in the original study. 
 
-The paradigm will be set up on Qualtrics and linked for use on mTurk.
+The paradigm will be set up on Qualtrics and linked for use on MTurk.
 
 In our replication, participants will be excluded if:
 
@@ -112,19 +116,19 @@ In our replication, we originally planned to exclude participants if:
 - Five or more of their written responses referred to topics other than the images.
 - Two or more of their written responses were word-for-word repeats of another written response.
 
-However, after collecting the data, it was clear that our planned exclusion criteria we too strict, as we would have excluded a significantly greater proportion of participants than the original study. In the below analyses, we have only excluded participants who failed the attention check, leaving 56 participants included in analyses (age: range = 23 - 65, M = 35.5, SD = 8.95; gender: 35 male, 21 female; race: 46 White/Caucasian, 4 Black/African American, 3 Asian/Asian American, 1 American Indian/Alaska Native, 0 Native Hawaiian/Pacific Islander, 2 Other).
+After collecting our data, it was clear that the planned exclusion criteria we too strict, as we would have excluded a significantly greater proportion of participants than in the original study. In the below analyses, we have only excluded participants who failed the attention check, leaving 56 participants included in analyses (age: range = 23 - 65, M = 35.5, SD = 8.95; gender: 35 male, 21 female; race: 46 White/Caucasian, 4 Black/African American, 3 Asian/Asian American, 1 American Indian/Alaska Native, 0 Native Hawaiian/Pacific Islander, 2 Other).
 
-#### Differences from pre-data collection methods plan
+#### Differences from Pre-Data Collection Methods Plan
 
 Our replication used the same task instructions as the original study, with a few additional sentences to inform participants that their responses would submit automatically after 30 seconds and to encourage participants to pay attention. See project repository for a full comparison.
 
 In our pre-registered procedure, we detailed that the "the mapping of the lists will be randomized as opposed to counterbalanced": a mistype. In our replication, the mapping of list and condition was counterbalanced across participants. The _order_ in which individual images were presented was randomized.
 
-Participants were not asked to report annual family income as originally planned, but they were asked to report their age, gender, and race at the end of the survey. These questions were not required fields.
+Participants were not asked to report annual family income as originally planned, but they were still asked to report their age, gender, and race at the end of the survey. These questions were not required fields.
 
 ## Results
 
-### Data preparation
+### Data Preparation
 
 ```{r load libraries, message=FALSE, warning=FALSE}
 library(tidyr)
@@ -250,7 +254,7 @@ sum(with(df.wrangled, race=="Other"))/20
 write.csv(df.wrangled,"nook2017wrangled_data.csv", row.names = FALSE)
 ```
 
-Here, wrangled data was manually edited for spelling errors. Then, the edited CSV file was run through LIWC.
+Here, wrangled data was manually edited for spelling errors. Then, the edited CSV file was run through the LIWC program.
 
 ```{r import analyzed data}
 df.LIWC <- read.csv("nook2017LIWC_analyzed_data.csv")
@@ -303,20 +307,15 @@ df.new_variables$six_letter_z[df.new_variables$six_letter_z == "NaN"] <- 0
 ```
 
 ```{r linguistic distancing}
-df.linguistic_distancing_b <- df.new_variables %>%  
+df.linguistic_distancing <- df.new_variables %>%  
   dplyr::group_by(subject, condition) %>% 
-  dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n())
-
-df.linguistic_distancing <- df.linguistic_distancing_b %>% 
-  dplyr::group_by(condition) %>% 
-  dplyr::mutate(avg_linguistic_distancing = mean(linguistic_distancing),
-                grouped_mean_rating = mean(rating)) %>% 
+  dplyr::mutate(linguistic_distancing = sum(pronoun_rz, verb_rz, article_z, discrepancy_rz, six_letter_z, na.rm = TRUE)/n()) %>% 
   ungroup()
 ```
 
-### Confirmatory analysis
+### Confirmatory Analysis
 
-Prior to conducting the repeated-measures ANOVAs, we checked the data by identifying extreme outliers and assessing normality.
+Prior to conducting the repeated-measures ANOVA, we checked the data by identifying extreme outliers and assessing normality.
 
 ```{r outliers}
 df.linguistic_distancing %>%
@@ -330,10 +329,12 @@ df.linguistic_distancing %>%
   shapiro_test(linguistic_distancing)
 ```
 
+Because the Shapiro-Wilk test becomes very sensitive even to a minor deviation from normality at larger sample sizes, we created QQ plots for each condition. 
+
 ```{r QQ plots}
 ggqqplot(df.linguistic_distancing, "linguistic_distancing", facet.by = "condition")
 ```
-Because the Shapiro-Wilk test becomes very sensitive even to a minor deviation from normality at larger sample sizes, we created QQ plots for each condition. Our data was not normally distributed, and so we were unable to conduct the repeated-measures ANOVA (code below).
+Our data included several extreme outliers and was not normally distributed, so we were unable to conduct the repeated-measures ANOVA (code below).
 
 ```{r anova, eval = FALSE}
 anova.linguistic_distancing <- anova_test(data = df.linguistic_distancing, dv = linguistic_distancing, wid = subject, within = condition)
@@ -341,9 +342,9 @@ anova.linguistic_distancing <- anova_test(data = df.linguistic_distancing, dv = 
 get_anova_table(anova.linguistic_distancing)
 ```
 
-Our two **key analyses of interest** included:
+The two **key analyses of interest** we ran included:
 
-- A paired-samples t tests (to assess for differences between the reappraise negative condition and the other two conditions).
+- A paired-samples t-test (to assess for differences between the look and reappraise conditions).
 - Pearson’s correlations (to test the hypotheses that higher reappraisal success scores would be associated with reduced use of negative affect words, increased use of positive affect words, and increased linguistic distancing).
 
 ```{r linguistic distancing t-test}
@@ -417,7 +418,7 @@ ggplot(df.linguistic_distancing, aes(x=linguistic_distancing, y=reappraisal)) +
   scale_x_continuous(breaks = seq(from = -5e-16, to = 6e-16, by = 2e-16))
 ```
 
-### Exploratory analyses
+### Exploratory Analyses
 
 In addition to attempting to replicate the key analyses of interest, as per our pre-registration, we also attempted to replicate the other visualizations from the original paper.
 
@@ -510,8 +511,26 @@ t.test(formula = positive_affect ~ condition, data = df.linguistic_distancing)
 
 ### Summary of Replication Attempt
 
-_Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result._  
+The primary result from our confirmatory analysis was that emotion regulation increased linguistic markers of social and temporal distance; however, our replication produced a substantially smaller effect than the original study. Unlike the original, we did not find that participants who showed greater linguistic distancing were more successful regulators. In fact, we observed a statistically significant effect in the opposite direction.
+
+We consider this a failed replication attempt because we were only able to partially replicate one of the two key findings from the original study.
 
 ### Commentary
 
-_Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long._
+_Exploratory Analyses_
+
+Through exploratory analyses, we were able to replicate the original authors' finding that participants reported higher negative affect when they were not regulating their emotions; however, this effect was also smaller than the original.
+
+We did not find statistically significant differences in the use of negative affect words or positive affect words across conditions.
+
+_Methods Commentary_
+
+After collecting the data, it was clear that our planned exclusion criteria we too strict, as we would have excluded a significantly greater proportion of participants than the original study. We tested our analyses with stricter criteria, and it did not substantially change our findings. 
+
+Where there was no variation in a subject's use of particular linguistic markers, the z-scores were incomputable, as you cannot divide by 0. Because the original authors' code was not publicly available, we decided to treat the incomputable z-scores as 0. We also tried excluding the incomputable z-scores, but this approach did not substantially change our findings.
+
+In our design of the replication, we removed the neutral trials, which participants completed between upsetting images in the original study. Our rationale was that removing the neutral trials would allow for us to run more participants within the confines of our funding. Unfortunately, removing the neutral images inflated self-reported negative affect and was likely one of the reasons we were unable to replicate many of the original findings.
+
+_Takeaways_
+
+Through this project, I have learned that it is important to make your code accessible, be explicit about exclusion criteria, and make known the exact methods used when manipulating data. Moreover, when attempting replication, it is crucial to follow the original author’s methodology as closely as possible or make changes which are very likely to improve the quality of your measurements.
